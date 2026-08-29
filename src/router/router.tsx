@@ -1,7 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router";
 import NavigationDrawer from "../modules/navigation-drawer/navigation-drawer";
 import Dashboard from "../modules/dashboard/dashboard";
-import Rooms from "../modules/rooms/roms";
+import Rooms from "../modules/rooms/rooms";
 
 export const customRouter = createBrowserRouter([
   {

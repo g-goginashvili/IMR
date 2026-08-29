@@ -1,0 +1,134 @@
+[
+  {
+    "id": "room-01",
+    "name": "Sequoia",
+    "floor": 1,
+    "capacity": 2,
+    "roomType": "single",
+    "amenities": ["tv", "whiteboard"],
+    "photoUrl": "https://images.unsplash.com/photo-1628062699790-7c45262b82b4?auto=format&fit=crop&w=800&q=70",
+    "description": "Small focus room for 1:1s and quick syncs.",
+    "condition": "operational"
+  },
+  {
+    "id": "room-02",
+    "name": "Willow",
+    "floor": 1,
+    "capacity": 4,
+    "roomType": "conference",
+    "amenities": ["tv", "whiteboard", "hdmi"],
+    "photoUrl": "https://images.unsplash.com/photo-1431540015161-0bf868a2d407?auto=format&fit=crop&w=800&q=70",
+    "description": "Compact meeting room near the main entrance.",
+    "condition": "operational"
+  },
+  {
+    "id": "room-03",
+    "name": "Birch",
+    "floor": 1,
+    "capacity": 6,
+    "roomType": "conference",
+    "amenities": ["tv", "whiteboard", "video-conference", "hdmi"],
+    "photoUrl": "https://images.unsplash.com/photo-1571624436279-b272aff752b5?auto=format&fit=crop&w=800&q=70",
+    "description": "Standard team room with wall-mounted display.",
+    "condition": "maintenance"
+  },
+  {
+    "id": "room-04",
+    "name": "Cedar",
+    "floor": 2,
+    "capacity": 8,
+    "roomType": "conference",
+    "amenities": ["tv", "whiteboard", "video-conference", "hdmi", "conference-phone"],
+    "photoUrl": "https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=800&q=70",
+    "description": "Mid-size room suited to client calls.",
+    "condition": "operational"
+  },
+  {
+    "id": "room-05",
+    "name": "Redwood",
+    "floor": 2,
+    "capacity": 12,
+    "roomType": "conference",
+    "amenities": ["tv", "whiteboard", "video-conference", "hdmi", "projector"],
+    "photoUrl": "https://images.unsplash.com/photo-1582653291997-079a1c04e5a1?auto=format&fit=crop&w=800&q=70",
+    "description": "Main conference room with dual displays.",
+    "condition": "operational"
+  },
+  {
+    "id": "room-06",
+    "name": "Aspen",
+    "floor": 2,
+    "capacity": 20,
+    "roomType": "boardroom",
+    "amenities": ["tv", "video-conference", "conference-phone", "hdmi"],
+    "photoUrl": "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=70",
+    "description": "Executive boardroom with video wall.",
+    "condition": "operational"
+  },
+  {
+    "id": "room-07",
+    "name": "Maple",
+    "floor": 3,
+    "capacity": 2,
+    "roomType": "single",
+    "amenities": ["standing-desk"],
+    "photoUrl": "https://images.unsplash.com/photo-1462826303086-329426d1aef5?auto=format&fit=crop&w=800&q=70",
+    "description": "Phone-booth style room for private calls.",
+    "condition": "operational"
+  },
+  {
+    "id": "room-08",
+    "name": "Juniper",
+    "floor": 3,
+    "capacity": 5,
+    "roomType": "conference",
+    "amenities": ["tv", "whiteboard", "hdmi"],
+    "photoUrl": "https://images.unsplash.com/photo-1503423571797-2d2bb372094a?auto=format&fit=crop&w=800&q=70",
+    "description": "Quiet room on the engineering floor.",
+    "condition": "operational"
+  },
+  {
+    "id": "room-09",
+    "name": "Spruce",
+    "floor": 3,
+    "capacity": 16,
+    "roomType": "training",
+    "amenities": ["projector", "whiteboard", "hdmi", "conference-phone"],
+    "photoUrl": "https://images.unsplash.com/photo-1661169399398-dd271af8f651?auto=format&fit=crop&w=800&q=70",
+    "description": "Training room with movable tables.",
+    "condition": "operational"
+  },
+  {
+    "id": "room-10",
+    "name": "Poplar",
+    "floor": 4,
+    "capacity": 10,
+    "roomType": "conference",
+    "amenities": ["tv", "whiteboard", "video-conference", "hdmi"],
+    "photoUrl": "https://images.unsplash.com/photo-1698653223247-09aaf01166fc?auto=format&fit=crop&w=800&q=70",
+    "description": "Bright corner room with city view.",
+    "condition": "operational"
+  },
+  {
+    "id": "room-11",
+    "name": "Magnolia",
+    "floor": 4,
+    "capacity": 24,
+    "roomType": "training",
+    "amenities": ["projector", "whiteboard", "video-conference", "conference-phone", "hdmi"],
+    "photoUrl": "https://images.unsplash.com/photo-1637665662134-db459c1bbb46?auto=format&fit=crop&w=800&q=70",
+    "description": "Largest room, used for all-hands and workshops.",
+    "condition": "maintenance"
+  },
+  {
+    "id": "room-12",
+    "name": "Hawthorn",
+    "floor": 4,
+    "capacity": 18,
+    "roomType": "boardroom",
+    "amenities": ["tv", "video-conference", "conference-phone", "projector"],
+    "photoUrl": "https://images.unsplash.com/photo-1605797491749-0c6989a44356?auto=format&fit=crop&w=800&q=70",
+    "description": "Formal boardroom for leadership meetings.",
+    "condition": "operational"
+  }
+]
