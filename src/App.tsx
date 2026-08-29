@@ -1,6 +1,9 @@
+import { RouterProvider } from "react-router";
+import { customRouter } from "./router/router";
+
 const App = () => {
   return (
-    <>Genesis</>
+    <RouterProvider router={customRouter} />
   );
 };
 
