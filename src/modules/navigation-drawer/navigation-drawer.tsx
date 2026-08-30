@@ -28,7 +28,7 @@ const navItems = [
 const NavigationDrawer = () => {
     const theme = useTheme();
     const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
-    const [open, setOpen] = useState(!isSmall);
+    const [isOpen, setOpen] = useState(false);
 
     return (
         <Box
@@ -64,7 +64,7 @@ const NavigationDrawer = () => {
             <Drawer
                 variant={isSmall ? 'temporary' : 'permanent'}
                 anchor={isSmall ? 'top' : 'left'}
-                open={isSmall ? open : true}
+                open={isOpen}
                 onClose={() => setOpen(false)}
                 sx={{
                     width: isSmall ? '100%' : 240,
@@ -96,6 +96,7 @@ const NavigationDrawer = () => {
                                     "&.active": { bgcolor: "action.selected" }
                                 }}
                                 component={NavLink} to={to}
+                                onClick={() => setOpen(false)}
                             >
                                 <ListItemIcon>{icon}</ListItemIcon>
                                 <ListItemText primary={label} />

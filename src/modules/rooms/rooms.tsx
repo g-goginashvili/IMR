@@ -1,6 +1,7 @@
-import { Alert, Box, Card, CardContent, CardMedia, Chip, CircularProgress, Divider, Paper, Typography } from "@mui/material";
+import { Alert, AppBar, Box, Card, CardContent, CardMedia, Chip, CircularProgress, Divider, IconButton, Paper, Typography } from "@mui/material";
 import type { ReactElement } from "react";
 import useRoomsController from "./use-rooms-controller";
+import { FilterAlt } from "@mui/icons-material";
 
 const Rooms = (): ReactElement => {
     const {
@@ -11,7 +12,18 @@ const Rooms = (): ReactElement => {
 
     return (
         <Box sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
-            <Typography variant="h3">Rooms</Typography>
+            <Box component="header"
+                sx={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center"
+                }}
+            >
+                <Typography variant="h3">Rooms</Typography>
+                <IconButton onClick={() => { }}>
+                    <FilterAlt />
+                </IconButton>
+            </Box>
             <Divider sx={{ mb: 2 }} />
             <Paper sx={{ flex: 1, minHeight: 0, overflowY: "auto" }}>
                 {error && <Alert severity="error" sx={{ m: 2 }}>{error}</Alert>}
