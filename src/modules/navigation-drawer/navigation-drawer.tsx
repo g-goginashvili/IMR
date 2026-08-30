@@ -4,13 +4,18 @@ import {
     CalendarMonth,
     EventNote,
     Fence,
+    Menu,
 } from "@mui/icons-material";
 import {
+    AppBar,
     Box,
-    Divider, Drawer, List, ListItem, ListItemButton,
+    Divider, Drawer, IconButton, List, ListItem, ListItemButton,
     ListItemIcon, ListItemText, Toolbar,
     Typography,
+    useMediaQuery,
+    useTheme,
 } from "@mui/material";
+import { useState } from "react";
 import { NavLink, Outlet } from "react-router";
 
 const navItems = [
@@ -20,52 +25,99 @@ const navItems = [
     { label: "Bookings", to: "/bookings", icon: <EventNote /> },
 ];
 
-const NavigationDrawer = () => (
-    <Box sx={{ display: "flex", height: "100dvh", overflow: "hidden" }}>
-        <Drawer variant="permanent" anchor="left" sx={{
-            width: 240, flexShrink: 0,
-            "& .MuiDrawer-paper": { width: 240 }
-        }}>
-            <Toolbar
-                disableGutters
-                sx={{
-                    padding: 2,
-                    gap: 1
-                }}
-            >
-                <Fence />
-                <Typography variant="body2">Internal Meeting Rooms</Typography>
-            </Toolbar>
-            <Divider />
-            <List>
-                {navItems.map(({ label, to, icon }) => (
-                    <ListItem key={to} disablePadding>
-                        <ListItemButton
-                            sx={{
-                                "&.active": { bgcolor: "action.selected" }
-                            }}
-                            component={NavLink} to={to}
-                        >
-                            <ListItemIcon>{icon}</ListItemIcon>
-                            <ListItemText primary={label} />
-                        </ListItemButton>
-                    </ListItem>
-                ))}
-            </List>
-        </Drawer>
+const NavigationDrawer = () => {
+    const theme = useTheme();
+    const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+    const [open, setOpen] = useState(!isSmall);
+
+    return (
         <Box
-            component="main"
             sx={{
-                flexGrow: 1,
-                minWidth: 0,
-                height: "100%",
-                overflow: "auto",
-                p: 2
+                display: "flex",
+                flexDirection: isSmall ? "column" : "row",
+                height: "100dvh",
+                overflow: "hidden",
             }}
         >
-            <Outlet />
+            {isSmall && (
+                <AppBar
+                    position="static"
+                    sx={{ zIndex: theme.zIndex.drawer + 1 }}
+                >
+                    <Toolbar
+                        disableGutters
+                        sx={{
+                            padding: 2,
+                            justifyContent: 'space-between',
+                        }}
+                    >
+                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                            <Fence />
+                            <Typography variant="body2">Internal Meeting Rooms</Typography>
+                        </Box>
+                        <IconButton onClick={() => setOpen(prev => !prev)} size="small">
+                            <Menu />
+                        </IconButton>
+                    </Toolbar>
+                </AppBar>
+            )}
+            <Drawer
+                variant={isSmall ? 'temporary' : 'permanent'}
+                anchor={isSmall ? 'top' : 'left'}
+                open={isSmall ? open : true}
+                onClose={() => setOpen(false)}
+                sx={{
+                    width: isSmall ? '100%' : 240,
+                    flexShrink: 0,
+                    '& .MuiDrawer-paper': {
+                        width: isSmall ? '100%' : 240,
+                        boxSizing: 'border-box',
+                    },
+                }}
+            >
+                <Toolbar
+                    disableGutters
+                    sx={{
+                        padding: 2,
+                        justifyContent: 'space-between',
+                    }}
+                >
+                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                        <Fence />
+                        <Typography variant="body2">Internal Meeting Rooms</Typography>
+                    </Box>
+                </Toolbar>
+                <Divider />
+                <List>
+                    {navItems.map(({ label, to, icon }) => (
+                        <ListItem key={to} disablePadding>
+                            <ListItemButton
+                                sx={{
+                                    "&.active": { bgcolor: "action.selected" }
+                                }}
+                                component={NavLink} to={to}
+                            >
+                                <ListItemIcon>{icon}</ListItemIcon>
+                                <ListItemText primary={label} />
+                            </ListItemButton>
+                        </ListItem>
+                    ))}
+                </List>
+            </Drawer>
+            <Box
+                component="main"
+                sx={{
+                    flexGrow: 1,
+                    minWidth: 0,
+                    minHeight: 0,
+                    overflow: "auto",
+                    p: 2
+                }}
+            >
+                <Outlet />
+            </Box>
         </Box>
-    </Box>
-);
+    );
+};
 
 export default NavigationDrawer;
