@@ -1,11 +1,28 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Room } from "./room-types";
 import { getRooms } from "../../api/rooms-api";
+import { useSearchParams } from "react-router";
 
 const useRoomsController = () => {
     const [rooms, setRooms] = useState<Room[]>([]);
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
+
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
+    const [params] = useSearchParams();
+
+    const visibleRooms = useMemo(() => {
+        const roomTypes = params.get("type")?.split(",") ?? [];
+        const capacity = Number(params.get("capacity"));
+        const floor = params.get("floor");
+        const hideMaintenance = params.get("hideMaintenance") === "true";
+        return rooms.filter((room) =>
+            (roomTypes.length === 0 || roomTypes.includes(room.roomType)) &&
+            (!capacity || room.capacity === capacity) &&
+            (!floor || String(room.floor) === floor) &&
+            (!hideMaintenance || room.condition !== "maintenance")
+        );
+    }, [rooms, params]);
 
     useEffect(() => {
         const controller = new AbortController();
@@ -31,7 +48,10 @@ const useRoomsController = () => {
     return {
         rooms,
         isLoading,
-        error
+        error,
+        isFilterOpen,
+        setIsFilterOpen,
+        visibleRooms
     };
 };
 
