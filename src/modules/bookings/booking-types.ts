@@ -1,6 +1,9 @@
 export type Booking = {
     id: string;
-    roomId: string;
+    room: {
+        id: string;
+        name: string;
+    },
     title: string;
     description?: string;
     organizer: {

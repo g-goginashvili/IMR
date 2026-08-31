@@ -1,26 +1,13 @@
 import {
-    Avatar, Box, Button, Card, CardContent, Chip, Dialog, DialogActions,
-    DialogContent, DialogContentText, DialogTitle, Divider,
-    IconButton, Modal, Paper, Typography
+    Avatar, Box, Button, Card, CardContent, Chip, Divider, Typography
 } from "@mui/material";
 import { AccessTime, EditOutlined, CloseOutlined, PunchClock } from "@mui/icons-material";
 import type { ReactElement } from "react";
 import MainLayout from "../../components/main-layout/main-layout";
 import useBookingsController from "./use-bookings-controller";
-
-const formatDay = (iso: string) => new Date(iso).toLocaleDateString(undefined, {
-    weekday: "short", day: "numeric", month: "short",
-});
-
-const formatTime = (iso: string) => new Date(iso).toLocaleTimeString(undefined, {
-    hour: "2-digit", minute: "2-digit",
-});
-
-const formatDuration = (start: string, end: string) => {
-    const minutes = Math.round((Date.parse(end) - Date.parse(start)) / 60_000);
-    const hours = Math.floor(minutes / 60);
-    return [hours && `${hours}h`, minutes % 60 && `${minutes % 60}m`].filter(Boolean).join(" ");
-};
+import BookingCancelDialog from "./booking-cancel-dialog";
+import BookingDetailsModal from "./booking-details-modal";
+import { formatDay, formatDuration, formatTime } from "../../utility/time-formatting";
 
 const Bookings = (): ReactElement => {
     const {
@@ -41,146 +28,19 @@ const Bookings = (): ReactElement => {
             error={error}
             isLoading={isLoading}
         >
-            <Dialog
-                open={!!pendingCancel}
+            <BookingCancelDialog
+                booking={pendingCancel}
+                isCancelling={isCancelling}
                 onClose={() => setPendingCancelId(null)}
-            >
-                <DialogTitle>Cancel this booking?</DialogTitle>
-                <DialogContent>
-                    <DialogContentText>
-                        {pendingCancel &&
-                            <>
-                                <strong>{pendingCancel.title}</strong> on {formatDay(pendingCancel.start)} at{" "}
-                                {formatTime(pendingCancel.start)} will be cancelled and the room released.
-                                This cannot be undone.
-                            </>
-                        }
-                    </DialogContentText>
-                </DialogContent>
-                <DialogActions sx={{ px: 3, pb: 2 }}>
-                    <Button
-                        onClick={() => setPendingCancelId(null)}
-                        disabled={isCancelling}
-                        sx={{ borderRadius: 5, textTransform: "none" }}
-                    >
-                        Keep booking
-                    </Button>
-                    <Button
-                        variant="contained"
-                        color="error"
-                        onClick={confirmCancel}
-                        disabled={isCancelling}
-                        sx={{ borderRadius: 5, textTransform: "none", px: 2 }}
-                    >
-                        {isCancelling ? "Cancelling…" : "Cancel booking"}
-                    </Button>
-                </DialogActions>
-            </Dialog>
+                onConfirm={confirmCancel}
+            />
 
-            <Modal
-                open={!!selectedBooking}
+            <BookingDetailsModal
+                booking={selectedBooking}
                 onClose={() => setSelectedBookingId(null)}
-                sx={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center"
-                }}
-            >
-                <Paper
-                    component="article"
-                    elevation={8}
-                    sx={{
-                        width: "min(520px, calc(100% - 32px))",
-                        maxHeight: "calc(100% - 64px)",
-                        overflowY: "auto",
-                        p: 3,
-                    }}
-                >
-                    {selectedBooking && <>
-                        <Box component="header" sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
-                            <Box sx={{ flex: 1, minWidth: 0 }}>
-                                <Typography variant="h5" component="h2" sx={{ fontWeight: 700 }}>
-                                    {selectedBooking.title}
-                                </Typography>
-                                <Typography variant="body2" color="text.secondary">
-                                    {formatDay(selectedBooking.start)} · {formatTime(selectedBooking.start)}-{formatTime(selectedBooking.end)}
-                                </Typography>
-                            </Box>
-                            <IconButton onClick={() => setSelectedBookingId(null)}>
-                                <CloseOutlined />
-                            </IconButton>
-                        </Box>
-
-                        <Divider sx={{ my: 2 }} />
-
-                        <Box
-                            component="dl"
-                            sx={{
-                                m: 0,
-                                display: "grid",
-                                gridTemplateColumns: "auto 1fr",
-                                rowGap: 1.5,
-                                columnGap: 3,
-                                "& dt": { color: "text.secondary", typography: "body2" },
-                                "& dd": { m: 0, typography: "body2" },
-                            }}
-                        >
-                            <Box component="dt">Status</Box>
-                            <Box component="dd">
-                                <Chip
-                                    size="small"
-                                    label={selectedBooking.status === "cancelled" ? "Cancelled" : "Confirmed"}
-                                    color={selectedBooking.status === "cancelled" ? "warning" : "success"}
-                                />
-                            </Box>
-
-                            <Box component="dt">Room</Box>
-                            <Box component="dd">{selectedBooking.roomId}</Box>
-
-                            <Box component="dt">Duration</Box>
-                            <Box component="dd">{formatDuration(selectedBooking.start, selectedBooking.end)}</Box>
-
-                            <Box component="dt">Organizer</Box>
-                            <Box component="dd">
-                                {selectedBooking.organizer.name}
-                                <Typography variant="caption" component="div" color="text.secondary">
-                                    {selectedBooking.organizer.email}
-                                </Typography>
-                            </Box>
-
-                            {selectedBooking.description && <>
-                                <Box component="dt">Description</Box>
-                                <Box component="dd">{selectedBooking.description}</Box>
-                            </>}
-                        </Box>
-
-                        <Divider sx={{ my: 2, borderStyle: "dashed" }} />
-
-                        <Box sx={{ display: "flex", justifyContent: "flex-end", gap: 1 }}>
-                            <Button
-                                size="small"
-                                color="error"
-                                startIcon={<CloseOutlined />}
-                                disabled={selectedBooking.status === "cancelled"}
-                                onClick={() => setPendingCancelId(selectedBooking.id)}
-                                sx={{ borderRadius: 5, textTransform: "none" }}
-                            >
-                                Cancel
-                            </Button>
-                            <Button
-                                size="small"
-                                variant="contained"
-                                startIcon={<EditOutlined />}
-                                disabled={selectedBooking.status === "cancelled"}
-                                onClick={() => { }}
-                                sx={{ borderRadius: 5, textTransform: "none", px: 2 }}
-                            >
-                                Edit
-                            </Button>
-                        </Box>
-                    </>}
-                </Paper>
-            </Modal>
+                onCancel={() => selectedBooking && setPendingCancelId(selectedBooking.id)}
+                onEdit={() => { }}
+            />
             <Box
                 component="section"
                 sx={{
@@ -246,7 +106,7 @@ const Bookings = (): ReactElement => {
 
                                 <Box sx={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 0.5 }}>
                                     <Typography variant="caption" color="text.secondary">
-                                        {booking.roomId}
+                                        {booking.room.name}
                                     </Typography>
                                     <Box sx={{ width: "100%", borderTop: 1, borderColor: "divider" }} />
                                     <Box sx={{ display: "flex", alignItems: "center", gap: 0.5 }}>
