@@ -27,7 +27,7 @@ const navItems = [
 
 const NavigationDrawer = () => {
     const theme = useTheme();
-    const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
+    const isSmall = useMediaQuery(theme.breakpoints.down(645));
     const [isOpen, setOpen] = useState(false);
 
     return (

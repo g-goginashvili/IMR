@@ -1,3 +1,12 @@
+export const toIso = (date: string, time: string) => `${date}T${time}:00`;
+
+export const todayLocal = () => {
+    const now = new Date();
+    const month = String(now.getMonth() + 1).padStart(2, "0");
+    const day = String(now.getDate()).padStart(2, "0");
+    return `${now.getFullYear()}-${month}-${day}`;
+};
+
 export const formatDay = (iso: string) => new Date(iso).toLocaleDateString(undefined, {
     weekday: "short", day: "numeric", month: "short",
 });

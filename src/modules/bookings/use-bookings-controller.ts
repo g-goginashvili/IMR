@@ -1,7 +1,8 @@
 import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "react-router";
 import type { Booking } from "./booking-types";
-import { cancelBooking, getBookings } from "../../api/bookings-api";
+import { cancelBooking, createBooking, getBookings, updateBooking } from "../../api/bookings-api";
+import type { BookingBodyType } from "../../components/booking-modal/use-booking-modal-controller";
 import type { FilterField } from "../../components/filter-drawer/filter-types";
 
 const useBookingsController = () => {
@@ -12,6 +13,8 @@ const useBookingsController = () => {
     const [selectedBookingId, setSelectedBookingId] = useState<string | null>(null);
     const [pendingCancelId, setPendingCancelId] = useState<string | null>(null);
     const [isCancelling, setIsCancelling] = useState<boolean>(false);
+
+    const [editorTarget, setEditorTarget] = useState<string | null>(null);
 
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [params] = useSearchParams();
@@ -63,6 +66,19 @@ const useBookingsController = () => {
     const selectedBooking = bookings.find(booking => booking.id === selectedBookingId) ?? null;
     const pendingCancel = bookings.find(booking => booking.id === pendingCancelId) ?? null;
 
+    const editedBooking = bookings.find(booking => booking.id === editorTarget);
+
+    const handleBookingModify = async (body: BookingBodyType) => {
+        if (editedBooking) {
+            const updated = await updateBooking(editedBooking.id, body);
+            setBookings(previous => previous.map(booking =>
+                booking.id === updated.id ? updated : booking));
+            return;
+        }
+        const created = await createBooking(body);
+        setBookings(previous => [...previous, created]);
+    };
+
     const confirmCancel = async () => {
         setError(null);
         setIsCancelling(true);
@@ -113,7 +129,11 @@ const useBookingsController = () => {
         isFilterOpen,
         setIsFilterOpen,
         filterFields,
-        visibleBookings
+        visibleBookings,
+        editorTarget,
+        setEditorTarget,
+        editedBooking,
+        handleBookingModify
     };
 };
 

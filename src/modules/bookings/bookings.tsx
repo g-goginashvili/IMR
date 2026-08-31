@@ -2,16 +2,18 @@ import {
     Avatar, Box, Button, Card, CardContent, Chip, Divider, Typography
 } from "@mui/material";
 import { AccessTime, EditOutlined, CloseOutlined, PunchClock } from "@mui/icons-material";
-import type { ReactElement } from "react";
+import { type ReactElement } from "react";
 import MainLayout from "../../components/main-layout/main-layout";
 import useBookingsController from "./use-bookings-controller";
 import BookingCancelDialog from "./booking-cancel-dialog";
 import BookingDetailsModal from "./booking-details-modal";
 import { formatDay, formatDuration, formatTime } from "../../utility/time-formatting";
 import FilterDrawer from "../../components/filter-drawer/filter-drawer";
+import BookingModal from "../../components/booking-modal/booking-modal";
 
 const Bookings = (): ReactElement => {
     const {
+        bookings,
         isLoading,
         error,
         selectedBooking,
@@ -24,6 +26,10 @@ const Bookings = (): ReactElement => {
         setIsFilterOpen,
         filterFields,
         visibleBookings,
+        editorTarget,
+        setEditorTarget,
+        editedBooking,
+        handleBookingModify,
     } = useBookingsController()
 
     return (
@@ -32,6 +38,7 @@ const Bookings = (): ReactElement => {
             error={error}
             isLoading={isLoading}
             onFilterClick={() => setIsFilterOpen(true)}
+            onAddButtonClick={() => setEditorTarget("new")}
         >
             <FilterDrawer
                 open={isFilterOpen}
@@ -50,8 +57,23 @@ const Bookings = (): ReactElement => {
                 booking={selectedBooking}
                 onClose={() => setSelectedBookingId(null)}
                 onCancel={() => selectedBooking && setPendingCancelId(selectedBooking.id)}
-                onEdit={() => { }}
+                onEdit={() => {
+                    if (!selectedBooking) return;
+                    setEditorTarget(selectedBooking.id);
+                    setSelectedBookingId(null);
+                }}
             />
+
+            {editorTarget && (
+                <BookingModal
+                    key={editorTarget}
+                    isOpen
+                    onClose={() => setEditorTarget(null)}
+                    onSubmit={handleBookingModify}
+                    bookings={bookings}
+                    booking={editedBooking}
+                />
+            )}
             <Box
                 component="section"
                 sx={{
@@ -157,7 +179,7 @@ const Bookings = (): ReactElement => {
                                     variant="contained"
                                     startIcon={<EditOutlined />}
                                     disabled={booking.status === "cancelled"}
-                                    onClick={() => { }}
+                                    onClick={(event) => { event.stopPropagation(); setEditorTarget(booking.id); }}
                                     sx={{ borderRadius: 5, textTransform: "none", px: 2 }}
                                 >
                                     Edit

@@ -1,15 +1,16 @@
 import {
-    Alert, Box, CircularProgress, Divider,
+    Alert, Box, Button, CircularProgress,
     IconButton, Paper, Typography
 } from "@mui/material";
 import { type ReactElement, type ReactNode } from "react";
-import { FilterAlt } from "@mui/icons-material";
+import { Add, FilterAlt } from "@mui/icons-material";
 
 type MainLayoutProps = {
     headerTitle: string;
     error: string | null;
     isLoading: boolean;
     onFilterClick?: () => void;
+    onAddButtonClick?: () => void;
     children: ReactNode;
 };
 
@@ -18,6 +19,7 @@ const MainLayout = ({
     error,
     isLoading,
     onFilterClick,
+    onAddButtonClick,
     children
 }: MainLayoutProps): ReactElement => {
 
@@ -33,11 +35,19 @@ const MainLayout = ({
                     }}
                 >
                     <Typography variant="h3">{headerTitle}</Typography>
-                    {onFilterClick && (
-                        <IconButton onClick={onFilterClick}>
-                            <FilterAlt />
-                        </IconButton>
-                    )}
+                    <Box sx={{ display: "flex", gap: 2, justifyContent: "center", alignItems: "center" }}>
+                        {onAddButtonClick &&
+                            <Button variant="contained" onClick={onAddButtonClick}>
+                                <Add /> Add
+                            </Button>
+                        }
+                        {onFilterClick &&
+                            <IconButton onClick={onFilterClick}>
+                                <FilterAlt />
+                            </IconButton>
+                        }
+                    </Box>
+
                 </Box>
             </Paper>
             <Paper sx={{ flex: 1, minHeight: 0, overflowY: "auto", borderRadius: 3 }} elevation={3}>
