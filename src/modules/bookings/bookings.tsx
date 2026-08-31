@@ -1,5 +1,6 @@
 import {
-    Avatar, Box, Button, Card, CardContent, Chip, Divider,
+    Avatar, Box, Button, Card, CardContent, Chip, Dialog, DialogActions,
+    DialogContent, DialogContentText, DialogTitle, Divider,
     IconButton, Modal, Paper, Typography
 } from "@mui/material";
 import { AccessTime, EditOutlined, CloseOutlined, PunchClock } from "@mui/icons-material";
@@ -27,7 +28,11 @@ const Bookings = (): ReactElement => {
         isLoading,
         error,
         selectedBooking,
-        setSelectedBooking,
+        setSelectedBookingId,
+        pendingCancel,
+        setPendingCancelId,
+        isCancelling,
+        confirmCancel,
     } = useBookingsController()
 
     return (
@@ -36,9 +41,45 @@ const Bookings = (): ReactElement => {
             error={error}
             isLoading={isLoading}
         >
+            <Dialog
+                open={!!pendingCancel}
+                onClose={() => setPendingCancelId(null)}
+            >
+                <DialogTitle>Cancel this booking?</DialogTitle>
+                <DialogContent>
+                    <DialogContentText>
+                        {pendingCancel &&
+                            <>
+                                <strong>{pendingCancel.title}</strong> on {formatDay(pendingCancel.start)} at{" "}
+                                {formatTime(pendingCancel.start)} will be cancelled and the room released.
+                                This cannot be undone.
+                            </>
+                        }
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions sx={{ px: 3, pb: 2 }}>
+                    <Button
+                        onClick={() => setPendingCancelId(null)}
+                        disabled={isCancelling}
+                        sx={{ borderRadius: 5, textTransform: "none" }}
+                    >
+                        Keep booking
+                    </Button>
+                    <Button
+                        variant="contained"
+                        color="error"
+                        onClick={confirmCancel}
+                        disabled={isCancelling}
+                        sx={{ borderRadius: 5, textTransform: "none", px: 2 }}
+                    >
+                        {isCancelling ? "Cancelling…" : "Cancel booking"}
+                    </Button>
+                </DialogActions>
+            </Dialog>
+
             <Modal
                 open={!!selectedBooking}
-                onClose={() => setSelectedBooking(null)}
+                onClose={() => setSelectedBookingId(null)}
                 sx={{
                     display: "flex",
                     justifyContent: "center",
@@ -65,7 +106,7 @@ const Bookings = (): ReactElement => {
                                     {formatDay(selectedBooking.start)} · {formatTime(selectedBooking.start)}-{formatTime(selectedBooking.end)}
                                 </Typography>
                             </Box>
-                            <IconButton onClick={() => setSelectedBooking(null)}>
+                            <IconButton onClick={() => setSelectedBookingId(null)}>
                                 <CloseOutlined />
                             </IconButton>
                         </Box>
@@ -121,7 +162,7 @@ const Bookings = (): ReactElement => {
                                 color="error"
                                 startIcon={<CloseOutlined />}
                                 disabled={selectedBooking.status === "cancelled"}
-                                onClick={() => { }}
+                                onClick={() => setPendingCancelId(selectedBooking.id)}
                                 sx={{ borderRadius: 5, textTransform: "none" }}
                             >
                                 Cancel
@@ -153,7 +194,7 @@ const Bookings = (): ReactElement => {
                     <Card
                         component="article"
                         key={booking.id}
-                        onClick={() => setSelectedBooking(booking)}
+                        onClick={() => setSelectedBookingId(booking.id)}
                         sx={{
                             p: 1,
                             opacity: booking.status === "cancelled" ? 0.65 : 1,
@@ -234,7 +275,7 @@ const Bookings = (): ReactElement => {
                                     color="error"
                                     startIcon={<CloseOutlined />}
                                     disabled={booking.status === "cancelled"}
-                                    onClick={() => { }}
+                                    onClick={(event) => { event.stopPropagation(); setPendingCancelId(booking.id); }}
                                     sx={{ borderRadius: 5, textTransform: "none" }}
                                 >
                                     Cancel
