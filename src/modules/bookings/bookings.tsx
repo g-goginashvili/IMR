@@ -1,5 +1,6 @@
 import {
-    Avatar, Box, Button, Card, CardContent, Chip, Divider, Modal, Typography
+    Avatar, Box, Button, Card, CardContent, Chip, Divider,
+    IconButton, Modal, Paper, Typography
 } from "@mui/material";
 import { AccessTime, EditOutlined, CloseOutlined, PunchClock } from "@mui/icons-material";
 import type { ReactElement } from "react";
@@ -25,8 +26,8 @@ const Bookings = (): ReactElement => {
         bookings,
         isLoading,
         error,
-        detailsModalState,
-        setDetailsModalState,
+        selectedBooking,
+        setSelectedBooking,
     } = useBookingsController()
 
     return (
@@ -36,15 +37,108 @@ const Bookings = (): ReactElement => {
             isLoading={isLoading}
         >
             <Modal
-                open={detailsModalState}
-                onClose={() => setDetailsModalState(false)}
+                open={!!selectedBooking}
+                onClose={() => setSelectedBooking(null)}
                 sx={{
                     display: "flex",
                     justifyContent: "center",
                     alignItems: "center"
                 }}
             >
-                <Box></Box>
+                <Paper
+                    component="article"
+                    elevation={8}
+                    sx={{
+                        width: "min(520px, calc(100% - 32px))",
+                        maxHeight: "calc(100% - 64px)",
+                        overflowY: "auto",
+                        p: 3,
+                    }}
+                >
+                    {selectedBooking && <>
+                        <Box component="header" sx={{ display: "flex", alignItems: "flex-start", gap: 2 }}>
+                            <Box sx={{ flex: 1, minWidth: 0 }}>
+                                <Typography variant="h5" component="h2" sx={{ fontWeight: 700 }}>
+                                    {selectedBooking.title}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    {formatDay(selectedBooking.start)} · {formatTime(selectedBooking.start)}-{formatTime(selectedBooking.end)}
+                                </Typography>
+                            </Box>
+                            <IconButton onClick={() => setSelectedBooking(null)}>
+                                <CloseOutlined />
+                            </IconButton>
+                        </Box>
+
+                        <Divider sx={{ my: 2 }} />
+
+                        <Box
+                            component="dl"
+                            sx={{
+                                m: 0,
+                                display: "grid",
+                                gridTemplateColumns: "auto 1fr",
+                                rowGap: 1.5,
+                                columnGap: 3,
+                                "& dt": { color: "text.secondary", typography: "body2" },
+                                "& dd": { m: 0, typography: "body2" },
+                            }}
+                        >
+                            <Box component="dt">Status</Box>
+                            <Box component="dd">
+                                <Chip
+                                    size="small"
+                                    label={selectedBooking.status === "cancelled" ? "Cancelled" : "Confirmed"}
+                                    color={selectedBooking.status === "cancelled" ? "warning" : "success"}
+                                />
+                            </Box>
+
+                            <Box component="dt">Room</Box>
+                            <Box component="dd">{selectedBooking.roomId}</Box>
+
+                            <Box component="dt">Duration</Box>
+                            <Box component="dd">{formatDuration(selectedBooking.start, selectedBooking.end)}</Box>
+
+                            <Box component="dt">Organizer</Box>
+                            <Box component="dd">
+                                {selectedBooking.organizer.name}
+                                <Typography variant="caption" component="div" color="text.secondary">
+                                    {selectedBooking.organizer.email}
+                                </Typography>
+                            </Box>
+
+                            {selectedBooking.description && <>
+                                <Box component="dt">Description</Box>
+                                <Box component="dd">{selectedBooking.description}</Box>
+                            </>}
+                        </Box>
+
+                        <Divider sx={{ my: 2, borderStyle: "dashed" }} />
+
+                        <Box sx={{ display: "flex", justifyContent: "flex-end", gap: 1 }}>
+                            <Button
+                                size="small"
+                                color="error"
+                                startIcon={<CloseOutlined />}
+                                disabled={selectedBooking.status === "cancelled"}
+                                onClick={() => { }}
+                                sx={{ borderRadius: 5, textTransform: "none" }}
+                            >
+                                Cancel
+                            </Button>
+                            <Button
+                                size="small"
+                                variant="contained"
+                                startIcon={<EditOutlined />}
+                                disabled={selectedBooking.status === "cancelled"}
+                                onClick={() => { }}
+                                sx={{ borderRadius: 5, textTransform: "none", px: 2 }}
+                            >
+                                Edit
+                            </Button>
+                        </Box>
+                    </>}
+                </Paper>
             </Modal>
             <Box
                 component="section"
@@ -59,7 +153,7 @@ const Bookings = (): ReactElement => {
                     <Card
                         component="article"
                         key={booking.id}
-                        onClick={() => setDetailsModalState(true)}
+                        onClick={() => setSelectedBooking(booking)}
                         sx={{
                             p: 1,
                             opacity: booking.status === "cancelled" ? 0.65 : 1,

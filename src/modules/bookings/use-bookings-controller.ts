@@ -7,7 +7,7 @@ const useBookingsController = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [error, setError] = useState<string | null>(null);
 
-    const [detailsModalState, setDetailsModalState] = useState<boolean>(false);
+    const [selectedBooking, setSelectedBooking] = useState<Booking | null>(null);
 
     useEffect(() => {
         const controller = new AbortController();
@@ -34,8 +34,8 @@ const useBookingsController = () => {
         bookings,
         isLoading,
         error,
-        detailsModalState,
-        setDetailsModalState,
+        selectedBooking,
+        setSelectedBooking,
     };
 };
 
