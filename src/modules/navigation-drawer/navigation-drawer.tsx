@@ -27,7 +27,7 @@ const navItems = [
 
 const NavigationDrawer = () => {
     const theme = useTheme();
-    const isSmall = useMediaQuery(theme.breakpoints.down('sm'));
+    const isSmall = useMediaQuery(theme.breakpoints.down("sm"));
     const [isOpen, setOpen] = useState(false);
 
     return (
@@ -48,10 +48,10 @@ const NavigationDrawer = () => {
                         disableGutters
                         sx={{
                             padding: 2,
-                            justifyContent: 'space-between',
+                            justifyContent: "space-between",
                         }}
                     >
-                        <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                        <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                             <Fence />
                             <Typography variant="body2">Internal Meeting Rooms</Typography>
                         </Box>
@@ -62,16 +62,16 @@ const NavigationDrawer = () => {
                 </AppBar>
             )}
             <Drawer
-                variant={isSmall ? 'temporary' : 'permanent'}
-                anchor={isSmall ? 'top' : 'left'}
+                variant={isSmall ? "temporary" : "permanent"}
+                anchor={isSmall ? "top" : "left"}
                 open={isOpen}
                 onClose={() => setOpen(false)}
                 sx={{
-                    width: isSmall ? '100%' : 240,
+                    width: isSmall ? "100%" : 240,
                     flexShrink: 0,
-                    '& .MuiDrawer-paper': {
-                        width: isSmall ? '100%' : 240,
-                        boxSizing: 'border-box',
+                    "& .MuiDrawer-paper": {
+                        width: isSmall ? "100%" : 240,
+                        boxSizing: "border-box",
                     },
                 }}
             >
@@ -79,10 +79,10 @@ const NavigationDrawer = () => {
                     disableGutters
                     sx={{
                         padding: 2,
-                        justifyContent: 'space-between',
+                        justifyContent: "space-between",
                     }}
                 >
-                    <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                    <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
                         <Fence />
                         <Typography variant="body2">Internal Meeting Rooms</Typography>
                     </Box>

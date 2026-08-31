@@ -1,0 +1,539 @@
+[
+  {
+    "id": "01a00ef4-22b2-712c-9797-eedaf20d6aa6",
+    "roomId": "room-04",
+    "title": "Engineering standup",
+    "description": "Daily sync for the platform team.",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-08-31T09:00:00",
+    "end": "2026-08-31T09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a00f4f-77f7-7ecd-b27b-f373d62001e9",
+    "roomId": "room-02",
+    "title": "Design 1:1",
+    "description": "Weekly catch-up on the design system backlog.",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-08-31T09:00:00",
+    "end": "2026-08-31T10:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a00fbe-84a6-7793-ac3d-e5d03c387c64",
+    "roomId": "room-06",
+    "title": "Q3 all-hands rehearsal",
+    "description": "Run through slides and timing before Thursday.",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-08-31T10:00:00",
+    "end": "2026-08-31T11:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01013-27a0-71f0-91fc-9682a74033a3",
+    "roomId": "room-01",
+    "title": "Performance review — Luka",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-08-31T10:30:00",
+    "end": "2026-08-31T11:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0103e-67f8-72b9-87fd-8e21e98e1fe0",
+    "roomId": "room-05",
+    "title": "Sprint planning",
+    "description": "Scope and estimate the next two-week sprint.",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-08-31T11:00:00",
+    "end": "2026-08-31T12:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0107f-4066-79e7-8de8-0768f3d81c47",
+    "roomId": "room-09",
+    "title": "Onboarding — September intake",
+    "description": "Systems, tooling and security walkthrough for new hires.",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-08-31T13:00:00",
+    "end": "2026-08-31T15:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a010d2-a19d-7d91-8783-bbc04ec3f756",
+    "roomId": "room-10",
+    "title": "API contract review",
+    "description": "Align on the v2 booking endpoints before implementation.",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-08-31T14:00:00",
+    "end": "2026-08-31T15:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01103-5a08-7f0e-a205-dab73f8110b6",
+    "roomId": "room-12",
+    "title": "Customer workshop — Acme",
+    "description": "On-site discovery session. Catering ordered.",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-08-31T15:00:00",
+    "end": "2026-08-31T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0113a-0f73-79df-a2ec-c16329a0b976",
+    "roomId": "room-04",
+    "title": "Sprint retrospective",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-08-31T16:00:00",
+    "end": "2026-08-31T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01163-42f4-792c-b07f-29759d5236ba",
+    "roomId": "room-04",
+    "title": "Engineering standup",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-09-01T09:00:00",
+    "end": "2026-09-01T09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01189-75b5-79bb-96f0-4ff780ae763c",
+    "roomId": "room-10",
+    "title": "Roadmap sync",
+    "description": "Q4 themes and dependencies across teams.",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-09-01T09:30:00",
+    "end": "2026-09-01T11:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a011be-941d-7455-b59c-51bf6951b39d",
+    "roomId": "room-02",
+    "title": "Recruiting screen — frontend",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-09-01T10:00:00",
+    "end": "2026-09-01T10:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a011d0-7842-797b-b22f-892afc23667c",
+    "roomId": "room-12",
+    "title": "Security awareness training",
+    "description": "Mandatory annual session. Bring laptops.",
+    "organizer": {
+      "name": "Marcus Hale",
+      "email": "marcus.hale@company.com"
+    },
+    "start": "2026-09-01T11:00:00",
+    "end": "2026-09-01T12:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a011df-ef33-707d-abd1-5c8a17f1fd0b",
+    "roomId": "room-08",
+    "title": "Marketing content review",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-01T13:30:00",
+    "end": "2026-09-01T14:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01224-4e4c-7768-9c80-dcd29235fff6",
+    "roomId": "room-05",
+    "title": "Architecture deep dive",
+    "description": "Event-driven migration: options and trade-offs.",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-01T14:00:00",
+    "end": "2026-09-01T16:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01253-004a-733f-b150-e02940e2c14e",
+    "roomId": "room-01",
+    "title": "1:1 Nino / Marcus",
+    "organizer": {
+      "name": "Marcus Hale",
+      "email": "marcus.hale@company.com"
+    },
+    "start": "2026-09-01T15:00:00",
+    "end": "2026-09-01T15:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01272-bb80-7c32-bef7-663d169c3642",
+    "roomId": "room-06",
+    "title": "Product demo day",
+    "description": "Teams show what shipped this sprint. Open to everyone.",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-01T16:00:00",
+    "end": "2026-09-01T17:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01289-0211-7d44-9c82-cec39d5c4039",
+    "roomId": "room-04",
+    "title": "Engineering standup",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-09-02T09:00:00",
+    "end": "2026-09-02T09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a012d2-897e-76c2-a52b-84a902174338",
+    "roomId": "room-08",
+    "title": "Bug triage",
+    "description": "Weekly pass over incoming reports.",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-02T09:30:00",
+    "end": "2026-09-02T10:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a012e9-e75f-7688-9084-02109f09aa7b",
+    "roomId": "room-12",
+    "title": "Leadership offsite prep",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-09-02T10:00:00",
+    "end": "2026-09-02T12:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0130d-59ba-7033-812e-8e841092872d",
+    "roomId": "room-07",
+    "title": "Interview debrief",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-09-02T11:00:00",
+    "end": "2026-09-02T11:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0132a-a142-7951-8a2e-16545b466a1f",
+    "roomId": "room-09",
+    "title": "Data platform review",
+    "description": "Warehouse costs and the new ingestion pipeline.",
+    "organizer": {
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
+    },
+    "start": "2026-09-02T13:00:00",
+    "end": "2026-09-02T14:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0133e-a723-7cba-b10e-5d43f7eaa192",
+    "roomId": "room-02",
+    "title": "Design critique",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-09-02T14:00:00",
+    "end": "2026-09-02T15:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a013a9-5949-7b45-a4c4-91ac384085c1",
+    "roomId": "room-05",
+    "title": "Incident postmortem — checkout outage",
+    "description": "Blameless review of the 28 August incident.",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-02T15:30:00",
+    "end": "2026-09-02T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a013e2-1e11-7601-af6d-1a01bd2840a3",
+    "roomId": "room-04",
+    "title": "Engineering standup",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-09-03T09:00:00",
+    "end": "2026-09-03T09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0141e-ec0c-742e-84ad-e54ccf72b8c4",
+    "roomId": "room-06",
+    "title": "Company all-hands",
+    "description": "Q3 results, headcount plan, and Q&A.",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-09-03T09:00:00",
+    "end": "2026-09-03T12:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0142a-a44c-7283-b6ff-59e49925a523",
+    "roomId": "room-08",
+    "title": "Vendor call — observability tooling",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-03T10:00:00",
+    "end": "2026-09-03T11:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01440-761e-71b6-b923-e079ee8de734",
+    "roomId": "room-01",
+    "title": "1:1 Elena / Sophie",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-03T11:30:00",
+    "end": "2026-09-03T12:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0146d-173c-7ad2-b1eb-2772609f5314",
+    "roomId": "room-12",
+    "title": "Hiring panel — backend engineer",
+    "description": "Four consecutive interview slots with breaks.",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-09-03T13:00:00",
+    "end": "2026-09-03T16:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01490-e731-72e4-8d5b-06135b379f16",
+    "roomId": "room-08",
+    "title": "Frontend guild",
+    "description": "Open forum for frontend patterns and tooling.",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-09-03T14:00:00",
+    "end": "2026-09-03T15:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a014fe-f30b-7338-9d2f-3e23c5db9766",
+    "roomId": "room-10",
+    "title": "Q4 budget review",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-09-03T16:00:00",
+    "end": "2026-09-03T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01548-1c6c-7519-b462-d01480a0a314",
+    "roomId": "room-04",
+    "title": "Engineering standup",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-09-04T09:00:00",
+    "end": "2026-09-04T09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a015af-9230-7280-b22d-1e45635561be",
+    "roomId": "room-02",
+    "title": "Sprint review",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-09-04T10:00:00",
+    "end": "2026-09-04T11:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a015f3-d4b8-7032-a380-1887bb711f9b",
+    "roomId": "room-05",
+    "title": "Sprint retrospective",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-09-04T11:00:00",
+    "end": "2026-09-04T12:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01667-10cb-7e29-99ba-a00513cf2d65",
+    "roomId": "room-09",
+    "title": "Lunch & learn — what's new in React 19",
+    "description": "Informal talk, lunch provided.",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-04T13:00:00",
+    "end": "2026-09-04T14:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a016d0-8c9e-7f95-a42b-9c05d9f0f4da",
+    "roomId": "room-06",
+    "title": "Friday wins",
+    "description": "Weekly wrap-up across the whole office.",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-09-04T15:00:00",
+    "end": "2026-09-04T16:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01712-68e3-78f0-b5fb-257e9e6ecb6b",
+    "roomId": "room-07",
+    "title": "Candidate intro call",
+    "description": "Candidate rescheduled to next week.",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-09-04T15:30:00",
+    "end": "2026-09-04T16:00:00",
+    "status": "cancelled"
+  },
+  {
+    "id": "01a0172b-84fd-7357-9bca-04a7d6c1871f",
+    "roomId": "room-05",
+    "title": "Sprint planning",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-08-25T10:00:00",
+    "end": "2026-08-25T11:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01755-bf4d-716d-8fc6-4abda00e36e2",
+    "roomId": "room-06",
+    "title": "Quarterly business review",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-08-27T09:00:00",
+    "end": "2026-08-27T10:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01781-dc73-75c3-b701-681629b8da03",
+    "roomId": "room-08",
+    "title": "Frontend guild",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-08-28T14:00:00",
+    "end": "2026-08-28T15:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a017dd-bc99-73d3-a2d2-726810bfc210",
+    "roomId": "room-04",
+    "title": "Engineering standup",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-09-07T09:00:00",
+    "end": "2026-09-07T09:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01822-5a54-7c51-bda3-bb2518b86378",
+    "roomId": "room-12",
+    "title": "Partner summit",
+    "description": "Full-morning session with regional partners.",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-08T09:00:00",
+    "end": "2026-09-08T12:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a01860-a226-7f1f-8bba-e18c410b26a1",
+    "roomId": "room-09",
+    "title": "Design system workshop",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-09-10T13:00:00",
+    "end": "2026-09-10T15:00:00",
+    "status": "confirmed"
+  }
+]
