@@ -64,6 +64,7 @@ const Bookings = (): ReactElement => {
                 {!isLoading && !error && visibleBookings.map(booking =>
                     <Card
                         component="article"
+                        elevation={3}
                         key={booking.id}
                         onClick={() => setSelectedBookingId(booking.id)}
                         sx={{
@@ -72,7 +73,7 @@ const Bookings = (): ReactElement => {
                             transition: "transform 150ms ease, box-shadow 150ms ease",
                             "&:hover": {
                                 transform: "translateY(-4px)",
-                                boxShadow: 4,
+                                boxShadow: 6,
                             },
                         }}
                     >

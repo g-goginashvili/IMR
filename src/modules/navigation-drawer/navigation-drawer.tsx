@@ -37,6 +37,7 @@ const NavigationDrawer = () => {
                 flexDirection: isSmall ? "column" : "row",
                 height: "100dvh",
                 overflow: "hidden",
+                bgcolor: "grey.300"
             }}
         >
             {isSmall && (
@@ -72,6 +73,8 @@ const NavigationDrawer = () => {
                     "& .MuiDrawer-paper": {
                         width: isSmall ? "100%" : 240,
                         boxSizing: "border-box",
+                        bgcolor: "grey.800",
+                        color: "grey.100"
                     },
                 }}
             >
@@ -87,18 +90,18 @@ const NavigationDrawer = () => {
                         <Typography variant="body2">Internal Meeting Rooms</Typography>
                     </Box>
                 </Toolbar>
-                <Divider />
+                <Divider sx={{ bgcolor: "grey.100" }} />
                 <List>
                     {navItems.map(({ label, to, icon }) => (
                         <ListItem key={to} disablePadding>
                             <ListItemButton
                                 sx={{
-                                    "&.active": { bgcolor: "action.selected" }
+                                    "&.active": { bgcolor: "primary.main" }
                                 }}
                                 component={NavLink} to={to}
                                 onClick={() => setOpen(false)}
                             >
-                                <ListItemIcon>{icon}</ListItemIcon>
+                                <ListItemIcon sx={{ color: "grey.100" }}>{icon}</ListItemIcon>
                                 <ListItemText primary={label} />
                             </ListItemButton>
                         </ListItem>

@@ -23,22 +23,24 @@ const MainLayout = ({
 
     return (
         <Box sx={{ height: "100%", display: "flex", flexDirection: "column" }}>
-            <Box component="header"
-                sx={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center"
-                }}
-            >
-                <Typography variant="h3">{headerTitle}</Typography>
-                {onFilterClick && (
-                    <IconButton onClick={onFilterClick}>
-                        <FilterAlt />
-                    </IconButton>
-                )}
-            </Box>
-            <Divider sx={{ mb: 2 }} />
-            <Paper sx={{ flex: 1, minHeight: 0, overflowY: "auto" }}>
+            <Paper sx={{ mb: 2, borderRadius: 3 }} elevation={3}>
+                <Box component="header"
+                    sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                        p: 2
+                    }}
+                >
+                    <Typography variant="h3">{headerTitle}</Typography>
+                    {onFilterClick && (
+                        <IconButton onClick={onFilterClick}>
+                            <FilterAlt />
+                        </IconButton>
+                    )}
+                </Box>
+            </Paper>
+            <Paper sx={{ flex: 1, minHeight: 0, overflowY: "auto", borderRadius: 3 }} elevation={3}>
                 {error && <Alert severity="error" sx={{ m: 2 }}>{error}</Alert>}
                 {isLoading ?
                     <Box sx={{ height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>

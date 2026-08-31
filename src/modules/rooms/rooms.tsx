@@ -39,6 +39,7 @@ const Rooms = (): ReactElement => {
                 {!isLoading && !error && visibleRooms.map(room =>
                     <Card
                         component="article"
+                        elevation={3}
                         key={room.id}
                         sx={{
                             transition: "transform 150ms ease, box-shadow 150ms ease",
