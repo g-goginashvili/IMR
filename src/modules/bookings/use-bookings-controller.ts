@@ -1,6 +1,8 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useSearchParams } from "react-router";
 import type { Booking } from "./booking-types";
 import { cancelBooking, getBookings } from "../../api/bookings-api";
+import type { FilterField } from "../../components/filter-drawer/filter-types";
 
 const useBookingsController = () => {
     const [bookings, setBookings] = useState<Booking[]>([]);
@@ -10,6 +12,53 @@ const useBookingsController = () => {
     const [selectedBookingId, setSelectedBookingId] = useState<string | null>(null);
     const [pendingCancelId, setPendingCancelId] = useState<string | null>(null);
     const [isCancelling, setIsCancelling] = useState<boolean>(false);
+
+    const [isFilterOpen, setIsFilterOpen] = useState(false);
+    const [params] = useSearchParams();
+
+    const filterFields: FilterField[] = useMemo(() => {
+        const rooms = new Map(bookings.map(booking => [booking.room.id, booking.room.name]));
+        return [
+            {
+                variant: "select",
+                key: "room",
+                label: "Room",
+                options: [...rooms].map(([value, label]) => ({ value, label })),
+            },
+            {
+                variant: "checkboxes",
+                key: "status",
+                label: "Status",
+                options: [
+                    { value: "confirmed", label: "Confirmed" },
+                    { value: "cancelled", label: "Cancelled" },
+                ],
+            },
+            {
+                variant: "date",
+                key: "from",
+                label: "From"
+            },
+            {
+                variant: "date",
+                key: "to",
+                label: "To"
+            },
+        ];
+    }, [bookings]);
+
+    const visibleBookings = useMemo(() => {
+        const room = params.get("room");
+        const statuses = params.get("status")?.split(",").filter(Boolean) ?? [];
+        const from = params.get("from");
+        const to = params.get("to");
+        return bookings.filter(booking =>
+            (!room || booking.room.id === room) &&
+            (statuses.length === 0 || statuses.includes(booking.status)) &&
+            (!from || booking.start >= from) &&
+            (!to || booking.start <= `${to}T23:59:59`)
+        );
+    }, [bookings, params]);
 
     const selectedBooking = bookings.find(booking => booking.id === selectedBookingId) ?? null;
     const pendingCancel = bookings.find(booking => booking.id === pendingCancelId) ?? null;
@@ -60,7 +109,11 @@ const useBookingsController = () => {
         pendingCancel,
         setPendingCancelId,
         isCancelling,
-        confirmCancel
+        confirmCancel,
+        isFilterOpen,
+        setIsFilterOpen,
+        filterFields,
+        visibleBookings
     };
 };
 

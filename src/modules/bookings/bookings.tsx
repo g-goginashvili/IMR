@@ -8,10 +8,10 @@ import useBookingsController from "./use-bookings-controller";
 import BookingCancelDialog from "./booking-cancel-dialog";
 import BookingDetailsModal from "./booking-details-modal";
 import { formatDay, formatDuration, formatTime } from "../../utility/time-formatting";
+import FilterDrawer from "../../components/filter-drawer/filter-drawer";
 
 const Bookings = (): ReactElement => {
     const {
-        bookings,
         isLoading,
         error,
         selectedBooking,
@@ -20,6 +20,10 @@ const Bookings = (): ReactElement => {
         setPendingCancelId,
         isCancelling,
         confirmCancel,
+        isFilterOpen,
+        setIsFilterOpen,
+        filterFields,
+        visibleBookings,
     } = useBookingsController()
 
     return (
@@ -27,7 +31,14 @@ const Bookings = (): ReactElement => {
             headerTitle="Bookings"
             error={error}
             isLoading={isLoading}
+            onFilterClick={() => setIsFilterOpen(true)}
         >
+            <FilterDrawer
+                open={isFilterOpen}
+                onClose={() => setIsFilterOpen(false)}
+                fields={filterFields}
+            />
+
             <BookingCancelDialog
                 booking={pendingCancel}
                 isCancelling={isCancelling}
@@ -50,7 +61,7 @@ const Bookings = (): ReactElement => {
                     gridTemplateColumns: "repeat(auto-fill, minmax(340px, 1fr))",
                 }}
             >
-                {!isLoading && !error && bookings.map(booking =>
+                {!isLoading && !error && visibleBookings.map(booking =>
                     <Card
                         component="article"
                         key={booking.id}

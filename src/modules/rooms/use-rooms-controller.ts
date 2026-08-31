@@ -1,7 +1,10 @@
 import { useEffect, useMemo, useState } from "react";
-import type { Room } from "./room-types";
+import type { Room, RoomType } from "./room-types";
 import { getRooms } from "../../api/rooms-api";
 import { useSearchParams } from "react-router";
+import type { FilterField } from "../../components/filter-drawer/filter-types";
+
+const roomTypeFilterItems: RoomType[] = ["single", "training", "conference", "boardroom"];
 
 const useRoomsController = () => {
     const [rooms, setRooms] = useState<Room[]>([]);
@@ -10,6 +13,38 @@ const useRoomsController = () => {
 
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [params] = useSearchParams();
+
+    const filterFields: FilterField[] = useMemo(() => {
+        const toFilterOptions = (values: number[]) =>
+            [...new Set(values)].sort((a, b) => a - b)
+                .map((value) => ({ value: String(value), label: String(value) }));
+
+        return [
+            {
+                variant: "checkboxes",
+                key: "type",
+                label: "Room type",
+                options: roomTypeFilterItems.map((type) => ({ value: type, label: type })),
+            },
+            {
+                variant: "select",
+                key: "capacity",
+                label: "Capacity",
+                options: toFilterOptions(rooms.map((room) => room.capacity)),
+            },
+            {
+                variant: "select",
+                key: "floor",
+                label: "Floor",
+                options: toFilterOptions(rooms.map((room) => room.floor)),
+            },
+            {
+                variant: "toggle",
+                key: "hideMaintenance",
+                label: "Hide under maintenance"
+            },
+        ];
+    }, [rooms]);
 
     const visibleRooms = useMemo(() => {
         const roomTypes = params.get("type")?.split(",") ?? [];
@@ -51,6 +86,7 @@ const useRoomsController = () => {
         error,
         isFilterOpen,
         setIsFilterOpen,
+        filterFields,
         visibleRooms
     };
 };
