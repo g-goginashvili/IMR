@@ -88,6 +88,7 @@ const useBookingsController = () => {
                 booking.id === pendingCancelId ? { ...booking, status: "cancelled" as const } : booking
             ));
             setPendingCancelId(null);
+            setSelectedBookingId(null);
         } catch (error) {
             setError(error instanceof Error ? error.message : "Failed to cancel booking");
         } finally {
