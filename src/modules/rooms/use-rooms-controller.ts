@@ -1,15 +1,13 @@
-import { useEffect, useMemo, useState } from "react";
-import type { Room, RoomType } from "./room-types";
-import { getRooms } from "../../api/rooms-api";
+import { useMemo, useState } from "react";
+import type { RoomType } from "./room-types";
 import { useSearchParams } from "react-router";
 import type { FilterField } from "../../components/filter-drawer/filter-types";
+import { useRooms } from "../../hooks/use-rooms";
 
 const roomTypeFilterItems: RoomType[] = ["single", "training", "conference", "boardroom"];
 
 const useRoomsController = () => {
-    const [rooms, setRooms] = useState<Room[]>([]);
-    const [isLoading, setIsLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string | null>(null);
+    const { rooms, isLoading, error } = useRooms();
 
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [params] = useSearchParams();
@@ -58,27 +56,6 @@ const useRoomsController = () => {
             (!hideMaintenance || room.condition !== "maintenance")
         );
     }, [rooms, params]);
-
-    useEffect(() => {
-        const controller = new AbortController();
-
-        (async () => {
-            setIsLoading(true);
-            setError(null);
-            try {
-                const response = await getRooms(controller.signal);
-                setRooms(response);
-                setIsLoading(false);
-            } catch (error) {
-                if (controller.signal.aborted) return;
-                setRooms([]);
-                setError(error instanceof Error ? error.message : "Failed to load rooms");
-                setIsLoading(false);
-            }
-        })();
-
-        return () => controller.abort();
-    }, []);
 
     return {
         rooms,

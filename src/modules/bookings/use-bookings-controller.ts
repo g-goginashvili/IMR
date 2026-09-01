@@ -1,14 +1,12 @@
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { useSearchParams } from "react-router";
-import type { Booking } from "./booking-types";
-import { cancelBooking, createBooking, getBookings, updateBooking } from "../../api/bookings-api";
+import { cancelBooking, createBooking, updateBooking } from "../../api/bookings-api";
 import type { BookingBodyType } from "../../components/booking-modal/use-booking-modal-controller";
 import type { FilterField } from "../../components/filter-drawer/filter-types";
+import { useBookings } from "../../hooks/use-bookings";
 
 const useBookingsController = () => {
-    const [bookings, setBookings] = useState<Booking[]>([]);
-    const [isLoading, setIsLoading] = useState<boolean>(true);
-    const [error, setError] = useState<string | null>(null);
+    const { bookings, setBookings, isLoading, error, setError } = useBookings();
 
     const [selectedBookingId, setSelectedBookingId] = useState<string | null>(null);
     const [pendingCancelId, setPendingCancelId] = useState<string | null>(null);
@@ -95,27 +93,6 @@ const useBookingsController = () => {
             setIsCancelling(false);
         }
     };
-
-    useEffect(() => {
-        const controller = new AbortController();
-
-        (async () => {
-            setIsLoading(true);
-            setError(null);
-            try {
-                const response = await getBookings(controller.signal);
-                setBookings(response);
-                setIsLoading(false);
-            } catch (error) {
-                if (controller.signal.aborted) return;
-                setBookings([]);
-                setError(error instanceof Error ? error.message : "Failed to load bookings");
-                setIsLoading(false);
-            }
-        })();
-
-        return () => controller.abort();
-    }, []);
 
     return {
         bookings,
