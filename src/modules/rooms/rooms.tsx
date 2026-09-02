@@ -1,8 +1,9 @@
-import { Box, Card, CardContent, CardMedia, Chip, Typography } from "@mui/material";
+import { Box, Card, CardContent, CardMedia, Chip, IconButton, Typography } from "@mui/material";
 import { type ReactElement } from "react";
 import useRoomsController from "./use-rooms-controller";
 import MainLayout from "../../components/main-layout/main-layout";
 import FilterDrawer from "../../components/filter-drawer/filter-drawer";
+import { FilterAlt } from "@mui/icons-material";
 
 const Rooms = (): ReactElement => {
     const {
@@ -19,7 +20,11 @@ const Rooms = (): ReactElement => {
             headerTitle="Rooms"
             error={error}
             isLoading={isLoading}
-            onFilterClick={() => setIsFilterOpen(true)}
+            headerActions={
+                <IconButton onClick={() => setIsFilterOpen(true)}>
+                    <FilterAlt />
+                </IconButton>
+            }
         >
             <FilterDrawer
                 open={isFilterOpen}

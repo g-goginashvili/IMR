@@ -1,7 +1,7 @@
 import {
-    Avatar, Box, Button, Card, CardContent, Chip, Divider, Typography
+    Avatar, Box, Button, Card, CardContent, Chip, Divider, IconButton, Typography
 } from "@mui/material";
-import { AccessTime, EditOutlined, CloseOutlined, PunchClock } from "@mui/icons-material";
+import { AccessTime, EditOutlined, CloseOutlined, PunchClock, FilterAlt, Add } from "@mui/icons-material";
 import { type ReactElement } from "react";
 import MainLayout from "../../components/main-layout/main-layout";
 import useBookingsController from "./use-bookings-controller";
@@ -37,8 +37,19 @@ const Bookings = (): ReactElement => {
             headerTitle="Bookings"
             error={error}
             isLoading={isLoading}
-            onFilterClick={() => setIsFilterOpen(true)}
-            onAddButtonClick={() => setEditorTarget("new")}
+            headerActions={
+                <>
+                    <Button
+                        variant="contained"
+                        onClick={() => setEditorTarget("new")}
+                    >
+                        <Add /> Add
+                    </Button>
+                    <IconButton onClick={() => setIsFilterOpen(true)}>
+                        <FilterAlt />
+                    </IconButton>
+                </>
+            }
         >
             <FilterDrawer
                 open={isFilterOpen}
