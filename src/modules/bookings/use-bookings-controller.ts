@@ -56,7 +56,7 @@ const useBookingsController = () => {
 
     const visibleBookings = useMemo(() => {
         const room = params.get("room");
-        const statuses = params.get("status")?.split(",") ?? [];
+        const statuses = params.get("status")?.split(",").filter(Boolean) ?? [];
         const from = params.get("from");
         const to = params.get("to");
         return bookings.filter(booking =>

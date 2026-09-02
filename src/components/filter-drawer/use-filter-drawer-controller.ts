@@ -5,7 +5,7 @@ const useFilterDrawerController = (fields: FilterField[]) => {
     const [params, setParams] = useSearchParams();
 
     const getValue = (key: string) => params.get(key) ?? "";
-    const getManyValues = (key: string) =>params.get(key)?.split(",") ?? [];
+    const getManyValues = (key: string) => params.get(key)?.split(",").filter(Boolean) ?? [];
     const isEnabled = (key: string) => params.get(key) === "true";
 
     const setValue = (key: string, value: string) =>

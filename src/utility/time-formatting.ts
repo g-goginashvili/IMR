@@ -18,7 +18,7 @@ export const formatTime = (iso: string) => new Date(iso).toLocaleTimeString(unde
 export const formatDuration = (start: string, end: string) => {
     const minutes = Math.round((Date.parse(end) - Date.parse(start)) / 60000);
     const hours = Math.floor(minutes / 60);
-    return [hours && `${hours}h`, minutes % 60 && `${minutes % 60}m`].join(" ");
+    return [hours && `${hours}h`, minutes % 60 && `${minutes % 60}m`].filter(Boolean).join(" ");
 };
 
 const toDateObject = (date: string) => {

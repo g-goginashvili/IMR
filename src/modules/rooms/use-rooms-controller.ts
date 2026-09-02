@@ -45,7 +45,7 @@ const useRoomsController = () => {
     }, [rooms]);
 
     const visibleRooms = useMemo(() => {
-        const roomTypes = params.get("type")?.split(",") ?? [];
+        const roomTypes = params.get("type")?.split(",").filter(Boolean) ?? [];
         const capacity = Number(params.get("capacity"));
         const floor = params.get("floor");
         const hideMaintenance = params.get("hideMaintenance") === "true";
