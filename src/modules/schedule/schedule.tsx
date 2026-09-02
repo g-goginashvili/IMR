@@ -1,19 +1,26 @@
 import type { ReactElement } from "react";
 import MainLayout from "../../components/main-layout/main-layout";
 import useScheduleController from "./use-schedule-controller";
+import ScheduleGrid from "./schedule-grid";
 import {
-    Box, Button, IconButton, TextField,
-    ToggleButton, ToggleButtonGroup, Typography
+    Box, Button, IconButton, MenuItem, TextField,
+    ToggleButton, ToggleButtonGroup
 } from "@mui/material";
 import { ChevronLeft, ChevronRight } from "@mui/icons-material";
 import type { ScheduleView } from "./use-schedule-controller";
 
 const Schedule = (): ReactElement => {
     const {
+        rooms,
+        isLoading,
+        error,
         view,
         setView,
         date,
         setDate,
+        selectedRoomId,
+        setRoom,
+        columns,
         rangeLabel,
         shift,
         goToToday,
@@ -23,8 +30,8 @@ const Schedule = (): ReactElement => {
     return (
         <MainLayout
             headerTitle="Schedule"
-            error={null}
-            isLoading={false}
+            error={error}
+            isLoading={isLoading}
             headerActions={
                 <>
                     <ToggleButtonGroup
@@ -68,11 +75,25 @@ const Schedule = (): ReactElement => {
                         value={date}
                         onChange={event => setDate(event.target.value)}
                     />
+
+                    {view === "week" && (
+                        <TextField
+                            select
+                            size="small"
+                            label="Room"
+                            value={rooms.length ? selectedRoomId : ""}
+                            onChange={event => setRoom(event.target.value)}
+                            sx={{ minWidth: 160 }}
+                        >
+                            {rooms.map(room => (
+                                <MenuItem key={room.id} value={room.id}>{room.name}</MenuItem>
+                            ))}
+                        </TextField>
+                    )}
                 </>
             }
         >
-            <Typography>{view}</Typography>
-            <Typography>{date}</Typography>
+            <ScheduleGrid columns={columns} />
         </MainLayout>
     );
 };

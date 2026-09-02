@@ -35,6 +35,17 @@ export const addDays = (date: string, amount: number) => {
 export const monday = (date: string) =>
     addDays(date, -((toDateObject(date).getDay() + 6) % 7));
 
+export const minutesIntoDay = (iso: string) =>
+    Number(iso.slice(11, 13)) * 60 + Number(iso.slice(14, 16));
+
+export const toTimeOfDay = (minutes: number) =>
+    `${pad(Math.floor(minutes / 60))}:${pad(minutes % 60)}`;
+
+export const weekDays = (anchor: string) => {
+    const weekStart = monday(anchor);
+    return Array.from({ length: 7 }, (_, index) => addDays(weekStart, index));
+};
+
 export const weekdayFormatter = (date: string) =>
     toDateObject(date).toLocaleDateString(undefined, { weekday: "short" });
 

@@ -62,7 +62,7 @@ const useDashboardController = () => {
                 id: room.id,
                 name: room.name,
                 percentage: Math.min(100, Math.round(
-                    ((bookedMinutes.get(room.id) ?? 0) / (24 * 60 * 7)) * 100)),
+                    ((bookedMinutes.get(room.id) ?? 0) / (14 * 60 * 7)) * 100)),
             }))
             .sort((a, b) => b.percentage - a.percentage);
     }, [rooms, bookings, now]);
