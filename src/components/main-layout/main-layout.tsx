@@ -25,13 +25,20 @@ const MainLayout = ({
                 <Box component="header"
                     sx={{
                         display: "flex",
+                        flexWrap: "wrap",
                         justifyContent: "space-between",
                         alignItems: "center",
+                        gap: 2,
                         p: 2
                     }}
                 >
-                    <Typography variant="h3">{headerTitle}</Typography>
-                    <Box sx={{ display: "flex", gap: 2, justifyContent: "center", alignItems: "center" }}>
+                    <Typography sx={{ typography: { xs: "h5", sm: "h3" } }}>
+                        {headerTitle}
+                    </Typography>
+                    <Box sx={{
+                        display: "flex", flexWrap: "wrap", gap: 2,
+                        justifyContent: "center", alignItems: "center"
+                    }}>
                         {headerActions}
                     </Box>
 
