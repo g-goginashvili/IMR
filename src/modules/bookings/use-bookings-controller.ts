@@ -1,18 +1,24 @@
 import { useMemo, useState } from "react";
 import { useSearchParams } from "react-router";
-import { cancelBooking, createBooking, updateBooking } from "../../api/bookings-api";
-import type { BookingBodyType } from "../../components/booking-modal/use-booking-modal-controller";
 import type { FilterField } from "../../components/filter-drawer/filter-types";
 import { useBookings } from "../../hooks/use-bookings";
+import { useBookingActions } from "../../hooks/use-booking-actions";
 
 const useBookingsController = () => {
     const { bookings, setBookings, isLoading, error, setError } = useBookings();
 
-    const [selectedBookingId, setSelectedBookingId] = useState<string | null>(null);
-    const [pendingCancelId, setPendingCancelId] = useState<string | null>(null);
-    const [isCancelling, setIsCancelling] = useState<boolean>(false);
-
-    const [editorTarget, setEditorTarget] = useState<string | null>(null);
+    const {
+        selectedBooking,
+        setSelectedBookingId,
+        pendingCancel,
+        setPendingCancelId,
+        isCancelling,
+        confirmCancel,
+        editorTarget,
+        setEditorTarget,
+        editedBooking,
+        handleBookingModify,
+    } = useBookingActions({ bookings, setBookings, setError });
 
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [params] = useSearchParams();
@@ -60,39 +66,6 @@ const useBookingsController = () => {
             (!to || booking.start <= `${to}T23:59:59`)
         );
     }, [bookings, params]);
-
-    const selectedBooking = bookings.find(booking => booking.id === selectedBookingId) ?? null;
-    const pendingCancel = bookings.find(booking => booking.id === pendingCancelId) ?? null;
-
-    const editedBooking = bookings.find(booking => booking.id === editorTarget);
-
-    const handleBookingModify = async (body: BookingBodyType) => {
-        if (editedBooking) {
-            const updated = await updateBooking(editedBooking.id, body);
-            setBookings(previous => previous.map(booking =>
-                booking.id === updated.id ? updated : booking));
-            return;
-        }
-        const created = await createBooking(body);
-        setBookings(previous => [...previous, created]);
-    };
-
-    const confirmCancel = async () => {
-        setError(null);
-        setIsCancelling(true);
-        try {
-            await cancelBooking(pendingCancelId!);
-            setBookings(previous => previous.map(booking =>
-                booking.id === pendingCancelId ? { ...booking, status: "cancelled" as const } : booking
-            ));
-            setPendingCancelId(null);
-            setSelectedBookingId(null);
-        } catch (error) {
-            setError(error instanceof Error ? error.message : "Failed to cancel booking");
-        } finally {
-            setIsCancelling(false);
-        }
-    };
 
     return {
         bookings,

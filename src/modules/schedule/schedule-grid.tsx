@@ -6,7 +6,10 @@ import useScheduleGridController, {
     GRID_HEIGHT, GUTTER_WIDTH, HOUR_HEIGHT, MIN_COLUMN_WIDTH, TIME_LINE_MIN_HEIGHT
 } from "./use-schedule-grid-controller";
 
-const ScheduleGrid = ({ columns }: { columns: ScheduleColumn[] }): ReactElement => {
+const ScheduleGrid = ({ columns, onBookingClick }: {
+    columns: ScheduleColumn[];
+    onBookingClick: (id: string) => void;
+}): ReactElement => {
     const theme = useTheme();
     const {
         hours,
@@ -110,8 +113,8 @@ const ScheduleGrid = ({ columns }: { columns: ScheduleColumn[] }): ReactElement 
 
                             return (
                                 <Box
-                                    component="article"
                                     key={booking.id}
+                                    onClick={() => onBookingClick(booking.id)}
                                     sx={{
                                         position: "absolute",
                                         top,
@@ -127,6 +130,9 @@ const ScheduleGrid = ({ columns }: { columns: ScheduleColumn[] }): ReactElement 
                                         borderColor: "primary.dark",
                                         bgcolor: "primary.light",
                                         color: "primary.contrastText",
+                                        cursor: "pointer",
+                                        transition: "filter 150ms ease, box-shadow 150ms ease",
+                                        "&:hover": { filter: "brightness(1.08)", boxShadow: 4 },
                                     }}
                                 >
                                     <Typography variant="caption" noWrap

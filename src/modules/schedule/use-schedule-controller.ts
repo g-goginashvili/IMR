@@ -6,14 +6,17 @@ import {
 import type { ScheduleColumn } from "./schedule-types";
 import { useBookings } from "../../hooks/use-bookings";
 import { useRooms } from "../../hooks/use-rooms";
+import { useBookingActions } from "../../hooks/use-booking-actions";
 
 export type ScheduleView = "day" | "week";
 
 const useScheduleController = () => {
     const {
         bookings,
+        setBookings,
         isLoading: isLoadingBookings,
         error: errorBookings,
+        setError: setErrorBookings
     } = useBookings();
     const {
         rooms,
@@ -21,11 +24,24 @@ const useScheduleController = () => {
         error: errorRooms,
     } = useRooms();
 
+    const {
+        selectedBooking,
+        setSelectedBookingId,
+        pendingCancel,
+        setPendingCancelId,
+        isCancelling,
+        confirmCancel,
+        editorTarget,
+        setEditorTarget,
+        editedBooking,
+        handleBookingModify,
+    } = useBookingActions({ bookings, setBookings, setError: setErrorBookings });
+
     const [params, setParams] = useSearchParams();
 
     const view: ScheduleView = params.get("view") === "week" ? "week" : "day";
     const date = params.get("date") ?? todayLocal();
-    
+
     const selectedRoomId = params.get("room") ?? rooms[0]?.id ?? "";
 
     const updateParams = (updates: Record<string, string>) => {
@@ -39,7 +55,7 @@ const useScheduleController = () => {
     const setView = (viewParam: ScheduleView) => updateParams({ view: viewParam });
     const setDate = (dateParam: string) => updateParams({ date: dateParam });
     const setRoom = (roomParam: string) => updateParams({ room: roomParam });
-    
+
     const shift = (direction: 1 | -1) =>
         setDate(addDays(date, view === "day" ? direction : direction * 7));
 
@@ -90,10 +106,20 @@ const useScheduleController = () => {
         selectedRoomId,
         setRoom,
         columns,
+        selectedBooking,
+        setSelectedBookingId,
         shift,
         goToToday,
         isToday,
         rangeLabel,
+        pendingCancel,
+        setPendingCancelId,
+        isCancelling,
+        confirmCancel,
+        editorTarget,
+        setEditorTarget,
+        editedBooking,
+        handleBookingModify,
     };
 };
 

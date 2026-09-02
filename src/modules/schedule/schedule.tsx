@@ -2,6 +2,9 @@ import type { ReactElement } from "react";
 import MainLayout from "../../components/main-layout/main-layout";
 import useScheduleController from "./use-schedule-controller";
 import ScheduleGrid from "./schedule-grid";
+import BookingDetailsModal from "../bookings/booking-details-modal";
+import BookingCancelDialog from "../bookings/booking-cancel-dialog";
+import BookingModal from "../../components/booking-modal/booking-modal";
 import {
     Box, Button, IconButton, MenuItem, TextField,
     ToggleButton, ToggleButtonGroup
@@ -11,6 +14,7 @@ import type { ScheduleView } from "./use-schedule-controller";
 
 const Schedule = (): ReactElement => {
     const {
+        bookings,
         rooms,
         isLoading,
         error,
@@ -21,10 +25,20 @@ const Schedule = (): ReactElement => {
         selectedRoomId,
         setRoom,
         columns,
+        selectedBooking,
+        setSelectedBookingId,
         rangeLabel,
         shift,
         goToToday,
         isToday,
+        pendingCancel,
+        setPendingCancelId,
+        isCancelling,
+        confirmCancel,
+        editorTarget,
+        setEditorTarget,
+        editedBooking,
+        handleBookingModify,
     } = useScheduleController();
 
     return (
@@ -93,7 +107,39 @@ const Schedule = (): ReactElement => {
                 </>
             }
         >
-            <ScheduleGrid columns={columns} />
+            <BookingCancelDialog
+                booking={pendingCancel}
+                isCancelling={isCancelling}
+                onClose={() => setPendingCancelId(null)}
+                onConfirm={confirmCancel}
+            />
+
+            <BookingDetailsModal
+                booking={selectedBooking}
+                onClose={() => setSelectedBookingId(null)}
+                onCancel={() => selectedBooking && setPendingCancelId(selectedBooking.id)}
+                onEdit={() => {
+                    if (!selectedBooking) return;
+                    setEditorTarget(selectedBooking.id);
+                    setSelectedBookingId(null);
+                }}
+            />
+
+            {editorTarget && (
+                <BookingModal
+                    key={editorTarget}
+                    isOpen
+                    onClose={() => setEditorTarget(null)}
+                    onSubmit={handleBookingModify}
+                    bookings={bookings}
+                    booking={editedBooking}
+                />
+            )}
+
+            <ScheduleGrid
+                columns={columns}
+                onBookingClick={setSelectedBookingId}
+            />
         </MainLayout>
     );
 };
