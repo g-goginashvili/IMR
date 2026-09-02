@@ -2,13 +2,15 @@ import { Box, Typography, useTheme } from "@mui/material";
 import type { ReactElement } from "react";
 import type { ScheduleColumn } from "./schedule-types";
 import { formatTime, toTimeOfDay } from "../../utility/time-formatting";
+import { isPast } from "../../utility/booking-rules";
 import useScheduleGridController, {
     GRID_HEIGHT, GUTTER_WIDTH, HOUR_HEIGHT, MIN_COLUMN_WIDTH, TIME_LINE_MIN_HEIGHT
 } from "./use-schedule-grid-controller";
 
-const ScheduleGrid = ({ columns, onBookingClick }: {
+const ScheduleGrid = ({ columns, onBookingClick, onSlotClick }: {
     columns: ScheduleColumn[];
     onBookingClick: (id: string) => void;
+    onSlotClick: (column: ScheduleColumn, startMinutes: number) => void;
 }): ReactElement => {
     const theme = useTheme();
     const {
@@ -18,6 +20,7 @@ const ScheduleGrid = ({ columns, onBookingClick }: {
         isNowVisible,
         offsetCalculator,
         bookingGeometry,
+        slotMinutesAt,
     } = useScheduleGridController();
 
     return (
@@ -82,12 +85,14 @@ const ScheduleGrid = ({ columns, onBookingClick }: {
                 {columns.map(column => (
                     <Box
                         key={`body-${column.date}-${column.roomId}`}
+                        onClick={event => onSlotClick(column, slotMinutesAt(event))}
                         sx={{
                             position: "relative",
                             height: GRID_HEIGHT,
                             mt: 1,
                             borderLeft: 1,
                             borderColor: "divider",
+                            cursor: column.date < today ? "default" : "copy",
                             backgroundImage: `repeating-linear-gradient(
                                 to bottom,
                                 ${theme.palette.divider} 0 1px,
@@ -110,11 +115,15 @@ const ScheduleGrid = ({ columns, onBookingClick }: {
 
                         {column.bookings.map(booking => {
                             const { top, height } = bookingGeometry(booking);
+                            const past = isPast(booking);
 
                             return (
                                 <Box
                                     key={booking.id}
-                                    onClick={() => onBookingClick(booking.id)}
+                                    onClick={event => {
+                                        event.stopPropagation();
+                                        onBookingClick(booking.id);
+                                    }}
                                     sx={{
                                         position: "absolute",
                                         top,
@@ -130,6 +139,7 @@ const ScheduleGrid = ({ columns, onBookingClick }: {
                                         borderColor: "primary.dark",
                                         bgcolor: "primary.light",
                                         color: "primary.contrastText",
+                                        opacity: past ? 0.55 : 1,
                                         cursor: "pointer",
                                         transition: "filter 150ms ease, box-shadow 150ms ease",
                                         "&:hover": { filter: "brightness(1.08)", boxShadow: 4 },

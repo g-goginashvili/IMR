@@ -1,12 +1,15 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useSearchParams } from "react-router";
 import {
-    addDays, dayMonthFormatter, monday, todayLocal, weekDays, weekdayFormatter
+    addDays, dayMonthFormatter, monday, todayLocal, toIso, toTimeOfDay, weekDays, weekdayFormatter
 } from "../../utility/time-formatting";
 import type { ScheduleColumn } from "./schedule-types";
 import { useBookings } from "../../hooks/use-bookings";
 import { useRooms } from "../../hooks/use-rooms";
 import { useBookingActions } from "../../hooks/use-booking-actions";
+import type { BookingDefaults } from "../../components/booking-modal/use-booking-modal-controller";
+import { DAY_END_HOUR } from "./use-schedule-grid-controller";
+import { isPastTime } from "../../utility/booking-rules";
 
 export type ScheduleView = "day" | "week";
 
@@ -37,12 +40,20 @@ const useScheduleController = () => {
         handleBookingModify,
     } = useBookingActions({ bookings, setBookings, setError: setErrorBookings });
 
+    const [newBookingDefaults, setNewBookingDefaults] = useState<BookingDefaults>();
+
     const [params, setParams] = useSearchParams();
 
     const view: ScheduleView = params.get("view") === "week" ? "week" : "day";
     const date = params.get("date") ?? todayLocal();
 
-    const selectedRoomId = params.get("room") ?? rooms[0]?.id ?? "";
+    const bookableRooms = useMemo(() =>
+        rooms.filter(room => room.condition === "operational"),
+        [rooms]);
+
+    const roomParam = params.get("room");
+    const selectedRoomId =
+        bookableRooms.find(room => room.id === roomParam)?.id ?? bookableRooms[0]?.id ?? "";
 
     const updateParams = (updates: Record<string, string>) => {
         setParams(previous => {
@@ -72,7 +83,7 @@ const useScheduleController = () => {
             booking.start.slice(0, 10) === day);
 
         if (view === "day") {
-            return rooms.map(room => ({
+            return bookableRooms.map(room => ({
                 roomId: room.id,
                 date,
                 label: room.name,
@@ -88,7 +99,24 @@ const useScheduleController = () => {
             sublabel: dayMonthFormatter(day),
             bookings: selectedRoomId ? bookingsOf(day, selectedRoomId) : [],
         }));
-    }, [view, rooms, bookings, date, selectedRoomId]);
+    }, [view, bookableRooms, bookings, date, selectedRoomId]);
+
+    const openSlotEditor = (column: ScheduleColumn, startMinutes: number) => {
+        if (isPastTime(toIso(column.date, toTimeOfDay(startMinutes)))) return;
+
+        setNewBookingDefaults({
+            roomId: column.roomId,
+            date: column.date,
+            startTime: toTimeOfDay(startMinutes),
+            endTime: toTimeOfDay(Math.min(startMinutes + 60, DAY_END_HOUR * 60)),
+        });
+        setEditorTarget("new");
+    };
+
+    const openEmptyEditor = () => {
+        setNewBookingDefaults({ date });
+        setEditorTarget("new");
+    };
 
     const rangeLabel = view === "day"
         ? `${weekdayFormatter(date)}, ${dayMonthFormatter(date)}`
@@ -96,7 +124,7 @@ const useScheduleController = () => {
 
     return {
         bookings,
-        rooms,
+        rooms: bookableRooms,
         isLoading: isLoadingBookings || isLoadingRooms,
         error: errorBookings ?? errorRooms,
         view,
@@ -120,6 +148,9 @@ const useScheduleController = () => {
         setEditorTarget,
         editedBooking,
         handleBookingModify,
+        newBookingDefaults,
+        openSlotEditor,
+        openEmptyEditor,
     };
 };
 

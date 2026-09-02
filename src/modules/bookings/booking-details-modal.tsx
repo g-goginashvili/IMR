@@ -5,6 +5,7 @@ import { EditOutlined, CloseOutlined } from "@mui/icons-material";
 import type { ReactElement } from "react";
 import type { Booking } from "./booking-types";
 import { formatDay, formatDuration, formatTime } from "../../utility/time-formatting";
+import { isEditable } from "../../utility/booking-rules";
 
 const BookingDetailsModal = ({
     booking, onClose, onCancel, onEdit
@@ -99,7 +100,7 @@ const BookingDetailsModal = ({
                             size="small"
                             color="error"
                             startIcon={<CloseOutlined />}
-                            disabled={booking.status === "cancelled"}
+                            disabled={!isEditable(booking)}
                             onClick={onCancel}
                             sx={{ borderRadius: 5, textTransform: "none" }}
                         >
@@ -109,7 +110,7 @@ const BookingDetailsModal = ({
                             size="small"
                             variant="contained"
                             startIcon={<EditOutlined />}
-                            disabled={booking.status === "cancelled"}
+                            disabled={!isEditable(booking)}
                             onClick={onEdit}
                             sx={{ borderRadius: 5, textTransform: "none", px: 2 }}
                         >

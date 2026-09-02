@@ -12,13 +12,13 @@ export const formatDay = (iso: string) => new Date(iso).toLocaleDateString(undef
 });
 
 export const formatTime = (iso: string) => new Date(iso).toLocaleTimeString(undefined, {
-    hour: "2-digit", minute: "2-digit",
+    hour: "2-digit", minute: "2-digit", hour12: false,
 });
 
 export const formatDuration = (start: string, end: string) => {
     const minutes = Math.round((Date.parse(end) - Date.parse(start)) / 60000);
     const hours = Math.floor(minutes / 60);
-    return [hours && `${hours}h`, minutes % 60 && `${minutes % 60}m`].filter(Boolean).join(" ");
+    return [hours && `${hours}h`, minutes % 60 && `${minutes % 60}m`].join(" ");
 };
 
 const toDateObject = (date: string) => {

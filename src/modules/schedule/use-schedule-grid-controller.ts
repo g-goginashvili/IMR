@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type MouseEvent } from "react";
 import type { Booking } from "../bookings/booking-types";
 import { minutesIntoDay, todayLocal } from "../../utility/time-formatting";
 
@@ -10,6 +10,7 @@ export const MIN_COLUMN_WIDTH = 132;
 export const GUTTER_WIDTH = 64;
 export const MIN_BLOCK_HEIGHT = 20;
 export const TIME_LINE_MIN_HEIGHT = 36;
+export const SLOT_MINUTES = 30;
 
 export const GRID_HEIGHT = (DAY_END_HOUR - DAY_START_HOUR) * HOUR_HEIGHT;
 
@@ -40,6 +41,13 @@ const useScheduleGridController = () => {
         return { top, height: Math.max(bottom - top, MIN_BLOCK_HEIGHT) };
     };
 
+    const slotMinutesAt = (event: MouseEvent<HTMLElement>) => {
+        const { top } = event.currentTarget.getBoundingClientRect();
+        const minutes = DAY_START_HOUR * 60 + ((event.clientY - top) / HOUR_HEIGHT) * 60;
+        const snappingPoint = Math.floor(minutes / SLOT_MINUTES) * SLOT_MINUTES;
+        return Math.min(Math.max(snappingPoint, DAY_START_HOUR * 60), DAY_END_HOUR * 60 - SLOT_MINUTES);
+    };
+
     const today = todayLocal();
     const isNowVisible = nowMinutes >= DAY_START_HOUR * 60 && nowMinutes <= DAY_END_HOUR * 60;
 
@@ -50,6 +58,7 @@ const useScheduleGridController = () => {
         isNowVisible,
         offsetCalculator,
         bookingGeometry,
+        slotMinutesAt,
     };
 };
 

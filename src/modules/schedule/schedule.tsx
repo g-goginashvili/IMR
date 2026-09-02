@@ -9,7 +9,7 @@ import {
     Box, Button, IconButton, MenuItem, TextField,
     ToggleButton, ToggleButtonGroup
 } from "@mui/material";
-import { ChevronLeft, ChevronRight } from "@mui/icons-material";
+import { Add, ChevronLeft, ChevronRight } from "@mui/icons-material";
 import type { ScheduleView } from "./use-schedule-controller";
 
 const Schedule = (): ReactElement => {
@@ -39,6 +39,9 @@ const Schedule = (): ReactElement => {
         setEditorTarget,
         editedBooking,
         handleBookingModify,
+        newBookingDefaults,
+        openSlotEditor,
+        openEmptyEditor,
     } = useScheduleController();
 
     return (
@@ -104,6 +107,10 @@ const Schedule = (): ReactElement => {
                             ))}
                         </TextField>
                     )}
+
+                    <Button variant="contained" onClick={openEmptyEditor}>
+                        <Add /> Add
+                    </Button>
                 </>
             }
         >
@@ -133,12 +140,14 @@ const Schedule = (): ReactElement => {
                     onSubmit={handleBookingModify}
                     bookings={bookings}
                     booking={editedBooking}
+                    defaults={newBookingDefaults}
                 />
             )}
 
             <ScheduleGrid
                 columns={columns}
                 onBookingClick={setSelectedBookingId}
+                onSlotClick={openSlotEditor}
             />
         </MainLayout>
     );

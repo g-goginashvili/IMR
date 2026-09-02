@@ -8,6 +8,7 @@ import useBookingsController from "./use-bookings-controller";
 import BookingCancelDialog from "./booking-cancel-dialog";
 import BookingDetailsModal from "./booking-details-modal";
 import { formatDay, formatDuration, formatTime } from "../../utility/time-formatting";
+import { isEditable } from "../../utility/booking-rules";
 import FilterDrawer from "../../components/filter-drawer/filter-drawer";
 import BookingModal from "../../components/booking-modal/booking-modal";
 
@@ -102,7 +103,7 @@ const Bookings = (): ReactElement => {
                         onClick={() => setSelectedBookingId(booking.id)}
                         sx={{
                             p: 1,
-                            opacity: booking.status === "cancelled" ? 0.65 : 1,
+                            opacity: isEditable(booking) ? 1 : 0.65,
                             transition: "transform 150ms ease, box-shadow 150ms ease",
                             "&:hover": {
                                 transform: "translateY(-4px)",
@@ -179,7 +180,7 @@ const Bookings = (): ReactElement => {
                                     size="small"
                                     color="error"
                                     startIcon={<CloseOutlined />}
-                                    disabled={booking.status === "cancelled"}
+                                    disabled={!isEditable(booking)}
                                     onClick={(event) => { event.stopPropagation(); setPendingCancelId(booking.id); }}
                                     sx={{ borderRadius: 5, textTransform: "none" }}
                                 >
@@ -189,7 +190,7 @@ const Bookings = (): ReactElement => {
                                     size="small"
                                     variant="contained"
                                     startIcon={<EditOutlined />}
-                                    disabled={booking.status === "cancelled"}
+                                    disabled={!isEditable(booking)}
                                     onClick={(event) => { event.stopPropagation(); setEditorTarget(booking.id); }}
                                     sx={{ borderRadius: 5, textTransform: "none", px: 2 }}
                                 >

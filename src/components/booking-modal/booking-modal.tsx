@@ -5,24 +5,25 @@ import {
 } from "@mui/material";
 import type { Booking } from "../../modules/bookings/booking-types";
 import useBookingModalController, {
-    type BookingBodyType
+    type BookingBodyType, type BookingDefaults
 } from "./use-booking-modal-controller";
 
 const BookingModal = ({
-    isOpen, onClose, onSubmit, bookings, booking
+    isOpen, onClose, onSubmit, bookings, booking, defaults
 }: {
     isOpen: boolean;
     onClose: () => void;
     onSubmit: (body: BookingBodyType) => Promise<void>;
     bookings: Booking[];
     booking?: Booking;
+    defaults?: BookingDefaults;
 }): ReactElement => {
     const {
         formik,
         isLoadingRooms,
         submitError,
         selectableRooms
-    } = useBookingModalController({ onClose, onSubmit, bookings, booking });
+    } = useBookingModalController({ onClose, onSubmit, bookings, booking, defaults });
 
     return (
         <Modal

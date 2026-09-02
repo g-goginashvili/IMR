@@ -5,6 +5,7 @@ import type { Booking } from "../../modules/bookings/booking-types";
 import type { Room } from "../../modules/rooms/room-types";
 import { getRooms } from "../../api/rooms-api";
 import { toIso, todayLocal } from "../../utility/time-formatting";
+import { isPastTime } from "../../utility/booking-rules";
 
 export type BookingBodyType = Omit<Booking, "id" | "status">;
 
@@ -19,24 +20,31 @@ export type BookingFormValues = {
     organizerEmail: string;
 };
 
-const formInitialValues = (booking?: Booking): BookingFormValues => ({
+export type BookingDefaults = Partial<
+    Pick<BookingFormValues, "roomId" | "date" | "startTime" | "endTime">
+>;
+
+const formInitialValues = (
+    booking?: Booking, defaults?: BookingDefaults
+): BookingFormValues => ({
     title: booking?.title ?? "",
     description: booking?.description ?? "",
-    roomId: booking?.room.id ?? "",
-    date: booking?.start.slice(0, 10) ?? todayLocal(),
-    startTime: booking?.start.slice(11, 16) ?? "09:00",
-    endTime: booking?.end.slice(11, 16) ?? "10:00",
+    roomId: booking?.room.id ?? defaults?.roomId ?? "",
+    date: booking?.start.slice(0, 10) ?? defaults?.date ?? todayLocal(),
+    startTime: booking?.start.slice(11, 16) ?? defaults?.startTime ?? "09:00",
+    endTime: booking?.end.slice(11, 16) ?? defaults?.endTime ?? "10:00",
     organizerName: booking?.organizer.name ?? "",
     organizerEmail: booking?.organizer.email ?? "",
 });
 
 const useBookingModalController = ({
-    onClose, onSubmit, bookings, booking
+    onClose, onSubmit, bookings, booking, defaults
 }: {
     onClose: () => void;
     onSubmit: (body: BookingBodyType) => Promise<void>;
     bookings: Booking[];
     booking?: Booking;
+    defaults?: BookingDefaults;
 }) => {
     const [rooms, setRooms] = useState<Room[]>([]);
     const [isLoadingRooms, setIsLoadingRooms] = useState<boolean>(true);
@@ -47,7 +55,13 @@ const useBookingModalController = ({
         description: Yup.string(),
         roomId: Yup.string().required("Room is required"),
         date: Yup.string().required("Date is required"),
-        startTime: Yup.string().required("Start time is required"),
+        startTime: Yup.string()
+            .required("Start time is required")
+            .test("not-past", "Cannot book in the past", function (startTime) {
+                const { date } = this.parent as BookingFormValues;
+                if (!date || !startTime) return true;
+                return !isPastTime(toIso(date, startTime));
+            }),
         endTime: Yup.string()
             .required("End time is required")
             .test("after-start", "End must be after start", function (endTime) {
@@ -76,7 +90,7 @@ const useBookingModalController = ({
     }), [bookings, booking?.id]);
 
     const formik = useFormik<BookingFormValues>({
-        initialValues: formInitialValues(booking),
+        initialValues: formInitialValues(booking, defaults),
         validationSchema,
         onSubmit: async (values) => {
             setSubmitError(null);
