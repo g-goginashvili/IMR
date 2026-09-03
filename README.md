@@ -61,6 +61,12 @@ The UI does not couple JSON files directly. `src/api/*` provides functions mimic
 `localStorage` is keeping data consistent across sessions, acting as a substitute for the absent backend. It is stored under the key `bookingsData`.
 This setup makes it possible to swap in a real API layer later — an HTTP client wrapper is already in place.
 
+### Server state management
+
+"fake API" server state is currently handled manually, through a generic `useResource` hook. It wraps the `useState` + `useEffect` pattern and calls the dedicated API, tracks `data`, `isLoading` and `error`, and aborts the request on unmount with an `AbortSignal`. `useRooms` and `useBookings` are the dedicated resource hooks built on it.
+
+Once a backend is implemented, this should be switched to a proper server-state manager, **TanStack Query**. It cuts the boilerplate and provides caching, request deduplication, retries and background refetching out of the box.
+
 ### Controller hooks
 
 Current setup with split between `*.tsx` view and a `use-*-controller.ts` hook makes the JSX readable and the hooks reusables.
