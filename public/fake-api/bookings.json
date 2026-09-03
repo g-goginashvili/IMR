@@ -1,163 +1,313 @@
 [
   {
-    "id": "01a00ef4-22b2-712c-9797-eedaf20d6aa6",
-    "room": {
-      "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
-      "name": "Cedar"
-    },
-    "title": "Engineering standup",
-    "description": "Daily sync for the platform team.",
-    "organizer": {
-      "name": "Luka Kapanadze",
-      "email": "luka.kapanadze@company.com"
-    },
-    "start": "2026-08-31T09:00:00",
-    "end": "2026-08-31T09:30:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a00f4f-77f7-7ecd-b27b-f373d62001e9",
+    "id": "01a0656c-6e00-7e11-ad54-e1c54bda3864",
     "room": {
       "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
       "name": "Willow"
     },
-    "title": "Design 1:1",
-    "description": "Weekly catch-up on the design system backlog.",
-    "organizer": {
-      "name": "Sophie Laurent",
-      "email": "sophie.laurent@company.com"
-    },
-    "start": "2026-08-31T09:00:00",
-    "end": "2026-08-31T10:00:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a00fbe-84a6-7793-ac3d-e5d03c387c64",
-    "room": {
-      "id": "01a0577a-dfa9-7234-83af-ed80ac260a53",
-      "name": "Aspen"
-    },
-    "title": "Q3 all-hands rehearsal",
-    "description": "Run through slides and timing before Thursday.",
-    "organizer": {
-      "name": "Anna Beridze",
-      "email": "anna.beridze@company.com"
-    },
-    "start": "2026-08-31T10:00:00",
-    "end": "2026-08-31T11:30:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a01013-27a0-71f0-91fc-9682a74033a3",
-    "room": {
-      "id": "01a0577a-dfa4-73a7-90ce-4b867c1a1306",
-      "name": "Sequoia"
-    },
-    "title": "Performance review — Luka",
-    "organizer": {
-      "name": "Anna Beridze",
-      "email": "anna.beridze@company.com"
-    },
-    "start": "2026-08-31T10:30:00",
-    "end": "2026-08-31T11:00:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a0103e-67f8-72b9-87fd-8e21e98e1fe0",
-    "room": {
-      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
-      "name": "Redwood"
-    },
-    "title": "Sprint planning",
-    "description": "Scope and estimate the next two-week sprint.",
-    "organizer": {
-      "name": "Luka Kapanadze",
-      "email": "luka.kapanadze@company.com"
-    },
-    "start": "2026-08-31T11:00:00",
-    "end": "2026-08-31T12:00:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a0107f-4066-79e7-8de8-0768f3d81c47",
-    "room": {
-      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
-      "name": "Spruce"
-    },
-    "title": "Onboarding — September intake",
-    "description": "Systems, tooling and security walkthrough for new hires.",
+    "title": "Partner summit",
+    "description": "Full-morning session with regional partners.",
     "organizer": {
       "name": "Nino Gogichaishvili",
       "email": "nino.gogichaishvili@company.com"
     },
-    "start": "2026-08-31T13:00:00",
-    "end": "2026-08-31T15:00:00",
+    "start": "2026-09-03T08:00:00",
+    "end": "2026-09-03T08:30:00",
     "status": "confirmed"
   },
   {
-    "id": "01a010d2-a19d-7d91-8783-bbc04ec3f756",
+    "id": "01a065a3-5c80-7c51-ba4f-e7465005cb48",
     "room": {
-      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
-      "name": "Poplar"
+      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
+      "name": "Spruce"
     },
-    "title": "API contract review",
-    "description": "Align on the v2 booking endpoints before implementation.",
+    "title": "1:1 Sophie / David",
     "organizer": {
-      "name": "David Kvaratskhelia",
-      "email": "david.kvaratskhelia@company.com"
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
     },
-    "start": "2026-08-31T14:00:00",
-    "end": "2026-08-31T15:00:00",
+    "start": "2026-09-03T09:00:00",
+    "end": "2026-09-03T10:00:00",
     "status": "confirmed"
   },
   {
-    "id": "01a01103-5a08-7f0e-a205-dab73f8110b6",
+    "id": "01a065be-d3c0-7182-a89c-b4973332afaa",
     "room": {
       "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
       "name": "Hawthorn"
     },
-    "title": "Customer workshop — Acme",
-    "description": "On-site discovery session. Catering ordered.",
+    "title": "Product demo day",
+    "description": "Teams show what shipped this sprint. Open to everyone.",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-09-03T09:30:00",
+    "end": "2026-09-03T10:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0662c-b0c0-7248-a58a-bc7703ae48ca",
+    "room": {
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "Frontend guild",
+    "description": "Open forum for frontend patterns and tooling.",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-03T11:30:00",
+    "end": "2026-09-03T13:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0667f-1680-7ea2-8858-9b394e42c0ef",
+    "room": {
+      "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
+      "name": "Cedar"
+    },
+    "title": "Sprint review",
+    "organizer": {
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
+    },
+    "start": "2026-09-03T13:00:00",
+    "end": "2026-09-03T14:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0669a-8dc0-752c-8124-1a33be8dad06",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "Product demo day",
+    "description": "Teams show what shipped this sprint. Open to everyone.",
     "organizer": {
       "name": "Elena Rossi",
       "email": "elena.rossi@company.com"
     },
-    "start": "2026-08-31T15:00:00",
-    "end": "2026-08-31T17:00:00",
+    "start": "2026-09-03T13:30:00",
+    "end": "2026-09-03T14:30:00",
     "status": "confirmed"
   },
   {
-    "id": "01a0113a-0f73-79df-a2ec-c16329a0b976",
+    "id": "01a066d1-7c40-7cc3-96a5-4c306a7637b9",
     "room": {
-      "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
-      "name": "Cedar"
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "1:1 Irina / Anna",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-09-03T14:30:00",
+    "end": "2026-09-03T15:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a066ec-f380-7945-94aa-62b7501f70e3",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "Recruiting screen — frontend",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-03T15:00:00",
+    "end": "2026-09-03T16:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a06723-e200-78a4-929d-9717c158475f",
+    "room": {
+      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
+      "name": "Redwood"
+    },
+    "title": "Security awareness training",
+    "description": "Mandatory annual session. Bring laptops.",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-03T16:00:00",
+    "end": "2026-09-03T16:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0673f-5940-79ac-91ba-9e53660146e8",
+    "room": {
+      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
+      "name": "Juniper"
+    },
+    "title": "Product demo day",
+    "description": "Teams show what shipped this sprint. Open to everyone.",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-03T16:30:00",
+    "end": "2026-09-03T17:00:00",
+    "status": "cancelled"
+  },
+  {
+    "id": "01a0673f-5940-7343-ad4c-e9346dac196e",
+    "room": {
+      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
+      "name": "Redwood"
+    },
+    "title": "1:1 Mariam / Elena",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-03T16:30:00",
+    "end": "2026-09-03T18:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0675a-d080-7736-9a2f-ca98c4b9fb3d",
+    "room": {
+      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
+      "name": "Hawthorn"
+    },
+    "title": "Design system workshop",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-03T17:00:00",
+    "end": "2026-09-03T17:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a06a92-ca00-773f-9582-611482dce567",
+    "room": {
+      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
+      "name": "Juniper"
     },
     "title": "Sprint retrospective",
     "organizer": {
       "name": "Luka Kapanadze",
       "email": "luka.kapanadze@company.com"
     },
-    "start": "2026-08-31T16:00:00",
-    "end": "2026-08-31T17:00:00",
+    "start": "2026-09-04T08:00:00",
+    "end": "2026-09-04T09:00:00",
     "status": "confirmed"
   },
   {
-    "id": "01a01163-42f4-792c-b07f-29759d5236ba",
+    "id": "01a06a92-ca00-7eff-b8e5-83131407954e",
+    "room": {
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "1:1 Luka / Elena",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-04T08:00:00",
+    "end": "2026-09-04T09:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a06ac9-b880-7535-b23c-cdd58d5d028c",
+    "room": {
+      "id": "01a0577a-dfa4-73a7-90ce-4b867c1a1306",
+      "name": "Sequoia"
+    },
+    "title": "Support handover",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-09-04T09:00:00",
+    "end": "2026-09-04T11:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a06b00-a700-7e68-8afa-a3df77dfe324",
     "room": {
       "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
       "name": "Cedar"
     },
-    "title": "Engineering standup",
+    "title": "Leadership offsite prep",
     "organizer": {
-      "name": "Luka Kapanadze",
-      "email": "luka.kapanadze@company.com"
+      "name": "Marcus Hale",
+      "email": "marcus.hale@company.com"
     },
-    "start": "2026-09-01T09:00:00",
-    "end": "2026-09-01T09:30:00",
+    "start": "2026-09-04T10:00:00",
+    "end": "2026-09-04T12:30:00",
     "status": "confirmed"
   },
   {
-    "id": "01a01189-75b5-79bb-96f0-4ff780ae763c",
+    "id": "01a06b00-a700-75ea-907a-091e9486ad6c",
+    "room": {
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "Recruiting screen — frontend",
+    "organizer": {
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
+    },
+    "start": "2026-09-04T10:00:00",
+    "end": "2026-09-04T12:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a06ba5-7280-76d9-9dd4-0116e1366390",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "Quarterly business review",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-04T13:00:00",
+    "end": "2026-09-04T14:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a06c13-4f80-767c-a3c7-a45dc7db4c11",
+    "room": {
+      "id": "01a0577a-dfa4-73a7-90ce-4b867c1a1306",
+      "name": "Sequoia"
+    },
+    "title": "Design system workshop",
+    "organizer": {
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
+    },
+    "start": "2026-09-04T15:00:00",
+    "end": "2026-09-04T15:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a06c2e-c6c0-7ebd-8f87-ba802d26dca4",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "Company all-hands",
+    "description": "Q3 results, headcount plan, and Q&A.",
+    "organizer": {
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
+    },
+    "start": "2026-09-04T15:30:00",
+    "end": "2026-09-04T16:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a06c4a-3e00-7c1f-9b5d-f7243bd6c5bd",
     "room": {
       "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
       "name": "Poplar"
@@ -165,385 +315,605 @@
     "title": "Roadmap sync",
     "description": "Q4 themes and dependencies across teams.",
     "organizer": {
-      "name": "Anna Beridze",
-      "email": "anna.beridze@company.com"
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
     },
-    "start": "2026-09-01T09:30:00",
-    "end": "2026-09-01T11:00:00",
-    "status": "confirmed"
+    "start": "2026-09-04T16:00:00",
+    "end": "2026-09-04T17:00:00",
+    "status": "cancelled"
   },
   {
-    "id": "01a011be-941d-7455-b59c-51bf6951b39d",
-    "room": {
-      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
-      "name": "Willow"
-    },
-    "title": "Recruiting screen — frontend",
-    "organizer": {
-      "name": "Nino Gogichaishvili",
-      "email": "nino.gogichaishvili@company.com"
-    },
-    "start": "2026-09-01T10:00:00",
-    "end": "2026-09-01T10:30:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a011d0-7842-797b-b22f-892afc23667c",
-    "room": {
-      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
-      "name": "Hawthorn"
-    },
-    "title": "Security awareness training",
-    "description": "Mandatory annual session. Bring laptops.",
-    "organizer": {
-      "name": "Marcus Hale",
-      "email": "marcus.hale@company.com"
-    },
-    "start": "2026-09-01T11:00:00",
-    "end": "2026-09-01T12:30:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a011df-ef33-707d-abd1-5c8a17f1fd0b",
-    "room": {
-      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
-      "name": "Juniper"
-    },
-    "title": "Marketing content review",
-    "organizer": {
-      "name": "Elena Rossi",
-      "email": "elena.rossi@company.com"
-    },
-    "start": "2026-09-01T13:30:00",
-    "end": "2026-09-01T14:30:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a01224-4e4c-7768-9c80-dcd29235fff6",
-    "room": {
-      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
-      "name": "Redwood"
-    },
-    "title": "Architecture deep dive",
-    "description": "Event-driven migration: options and trade-offs.",
-    "organizer": {
-      "name": "David Kvaratskhelia",
-      "email": "david.kvaratskhelia@company.com"
-    },
-    "start": "2026-09-01T14:00:00",
-    "end": "2026-09-01T16:00:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a01253-004a-733f-b150-e02940e2c14e",
+    "id": "01a06c65-b540-723c-b3a0-90d5f98423cf",
     "room": {
       "id": "01a0577a-dfa4-73a7-90ce-4b867c1a1306",
       "name": "Sequoia"
     },
-    "title": "1:1 Nino / Marcus",
+    "title": "Release readiness check",
+    "description": "Go/no-go for the September release.",
     "organizer": {
-      "name": "Marcus Hale",
-      "email": "marcus.hale@company.com"
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
     },
-    "start": "2026-09-01T15:00:00",
-    "end": "2026-09-01T15:30:00",
+    "start": "2026-09-04T16:30:00",
+    "end": "2026-09-04T17:30:00",
     "status": "confirmed"
   },
   {
-    "id": "01a01272-bb80-7c32-bef7-663d169c3642",
-    "room": {
-      "id": "01a0577a-dfa9-7234-83af-ed80ac260a53",
-      "name": "Aspen"
-    },
-    "title": "Product demo day",
-    "description": "Teams show what shipped this sprint. Open to everyone.",
-    "organizer": {
-      "name": "Mariam Tsiklauri",
-      "email": "mariam.tsiklauri@company.com"
-    },
-    "start": "2026-09-01T16:00:00",
-    "end": "2026-09-01T17:30:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a01289-0211-7d44-9c82-cec39d5c4039",
+    "id": "01a06c81-2c80-7945-bf81-f9bc32abf7dc",
     "room": {
       "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
       "name": "Cedar"
     },
-    "title": "Engineering standup",
+    "title": "Vendor call — HR platform",
     "organizer": {
-      "name": "Luka Kapanadze",
-      "email": "luka.kapanadze@company.com"
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
     },
-    "start": "2026-09-02T09:00:00",
-    "end": "2026-09-02T09:30:00",
+    "start": "2026-09-04T17:00:00",
+    "end": "2026-09-04T18:00:00",
     "status": "confirmed"
   },
   {
-    "id": "01a012d2-897e-76c2-a52b-84a902174338",
-    "room": {
-      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
-      "name": "Juniper"
-    },
-    "title": "Bug triage",
-    "description": "Weekly pass over incoming reports.",
-    "organizer": {
-      "name": "Jonas Weber",
-      "email": "jonas.weber@company.com"
-    },
-    "start": "2026-09-02T09:30:00",
-    "end": "2026-09-02T10:30:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a012e9-e75f-7688-9084-02109f09aa7b",
-    "room": {
-      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
-      "name": "Hawthorn"
-    },
-    "title": "Leadership offsite prep",
-    "organizer": {
-      "name": "Anna Beridze",
-      "email": "anna.beridze@company.com"
-    },
-    "start": "2026-09-02T10:00:00",
-    "end": "2026-09-02T12:00:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a0130d-59ba-7033-812e-8e841092872d",
+    "id": "01a06c81-2c80-77be-a034-e199f75f8b5a",
     "room": {
       "id": "01a0577a-dfaa-76a5-befc-d7077d27b40b",
       "name": "Maple"
     },
-    "title": "Interview debrief",
-    "organizer": {
-      "name": "Nino Gogichaishvili",
-      "email": "nino.gogichaishvili@company.com"
-    },
-    "start": "2026-09-02T11:00:00",
-    "end": "2026-09-02T11:30:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a0132a-a142-7951-8a2e-16545b466a1f",
-    "room": {
-      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
-      "name": "Spruce"
-    },
-    "title": "Data platform review",
-    "description": "Warehouse costs and the new ingestion pipeline.",
-    "organizer": {
-      "name": "Irina Petrova",
-      "email": "irina.petrova@company.com"
-    },
-    "start": "2026-09-02T13:00:00",
-    "end": "2026-09-02T14:30:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a0133e-a723-7cba-b10e-5d43f7eaa192",
-    "room": {
-      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
-      "name": "Willow"
-    },
-    "title": "Design critique",
-    "organizer": {
-      "name": "Sophie Laurent",
-      "email": "sophie.laurent@company.com"
-    },
-    "start": "2026-09-02T14:00:00",
-    "end": "2026-09-02T15:00:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a013a9-5949-7b45-a4c4-91ac384085c1",
-    "room": {
-      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
-      "name": "Redwood"
-    },
-    "title": "Incident postmortem — checkout outage",
-    "description": "Blameless review of the 28 August incident.",
+    "title": "Sprint planning",
+    "description": "Scope and estimate the next two-week sprint.",
     "organizer": {
       "name": "Jonas Weber",
       "email": "jonas.weber@company.com"
     },
-    "start": "2026-09-02T15:30:00",
-    "end": "2026-09-02T17:00:00",
+    "start": "2026-09-04T17:00:00",
+    "end": "2026-09-04T18:00:00",
     "status": "confirmed"
   },
   {
-    "id": "01a013e2-1e11-7601-af6d-1a01bd2840a3",
+    "id": "01a07042-7a40-727d-92b8-8c2000a78f29",
     "room": {
-      "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
-      "name": "Cedar"
+      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
+      "name": "Juniper"
     },
-    "title": "Engineering standup",
+    "title": "Quarterly business review",
     "organizer": {
-      "name": "Luka Kapanadze",
-      "email": "luka.kapanadze@company.com"
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
     },
-    "start": "2026-09-03T09:00:00",
-    "end": "2026-09-03T09:30:00",
+    "start": "2026-09-05T10:30:00",
+    "end": "2026-09-05T13:00:00",
     "status": "confirmed"
   },
   {
-    "id": "01a0141e-ec0c-742e-84ad-e54ccf72b8c4",
+    "id": "01a0718c-1140-7362-a033-7d8dfb06be70",
     "room": {
       "id": "01a0577a-dfa9-7234-83af-ed80ac260a53",
       "name": "Aspen"
     },
-    "title": "Company all-hands",
-    "description": "Q3 results, headcount plan, and Q&A.",
-    "organizer": {
-      "name": "Anna Beridze",
-      "email": "anna.beridze@company.com"
-    },
-    "start": "2026-09-03T09:00:00",
-    "end": "2026-09-03T12:00:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a0142a-a44c-7283-b6ff-59e49925a523",
-    "room": {
-      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
-      "name": "Juniper"
-    },
-    "title": "Vendor call — observability tooling",
-    "organizer": {
-      "name": "David Kvaratskhelia",
-      "email": "david.kvaratskhelia@company.com"
-    },
-    "start": "2026-09-03T10:00:00",
-    "end": "2026-09-03T11:00:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a01440-761e-71b6-b923-e079ee8de734",
-    "room": {
-      "id": "01a0577a-dfa4-73a7-90ce-4b867c1a1306",
-      "name": "Sequoia"
-    },
-    "title": "1:1 Elena / Sophie",
-    "organizer": {
-      "name": "Elena Rossi",
-      "email": "elena.rossi@company.com"
-    },
-    "start": "2026-09-03T11:30:00",
-    "end": "2026-09-03T12:00:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a0146d-173c-7ad2-b1eb-2772609f5314",
-    "room": {
-      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
-      "name": "Hawthorn"
-    },
-    "title": "Hiring panel — backend engineer",
-    "description": "Four consecutive interview slots with breaks.",
-    "organizer": {
-      "name": "Nino Gogichaishvili",
-      "email": "nino.gogichaishvili@company.com"
-    },
-    "start": "2026-09-03T13:00:00",
-    "end": "2026-09-03T16:00:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a01490-e731-72e4-8d5b-06135b379f16",
-    "room": {
-      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
-      "name": "Juniper"
-    },
-    "title": "Frontend guild",
-    "description": "Open forum for frontend patterns and tooling.",
+    "title": "Architecture deep dive",
+    "description": "Event-driven migration: options and trade-offs.",
     "organizer": {
       "name": "Sophie Laurent",
       "email": "sophie.laurent@company.com"
     },
-    "start": "2026-09-03T14:00:00",
-    "end": "2026-09-03T15:00:00",
+    "start": "2026-09-05T16:30:00",
+    "end": "2026-09-05T17:30:00",
     "status": "confirmed"
   },
   {
-    "id": "01a014fe-f30b-7338-9d2f-3e23c5db9766",
-    "room": {
-      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
-      "name": "Poplar"
-    },
-    "title": "Q4 budget review",
-    "organizer": {
-      "name": "Anna Beridze",
-      "email": "anna.beridze@company.com"
-    },
-    "start": "2026-09-03T16:00:00",
-    "end": "2026-09-03T17:00:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a01548-1c6c-7519-b462-d01480a0a314",
-    "room": {
-      "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
-      "name": "Cedar"
-    },
-    "title": "Engineering standup",
-    "organizer": {
-      "name": "Luka Kapanadze",
-      "email": "luka.kapanadze@company.com"
-    },
-    "start": "2026-09-04T09:00:00",
-    "end": "2026-09-04T09:30:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a015af-9230-7280-b22d-1e45635561be",
-    "room": {
-      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
-      "name": "Willow"
-    },
-    "title": "Sprint review",
-    "organizer": {
-      "name": "Luka Kapanadze",
-      "email": "luka.kapanadze@company.com"
-    },
-    "start": "2026-09-04T10:00:00",
-    "end": "2026-09-04T11:00:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a015f3-d4b8-7032-a380-1887bb711f9b",
+    "id": "01a075f2-2a80-7eff-9066-949486740597",
     "room": {
       "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
       "name": "Redwood"
     },
-    "title": "Sprint retrospective",
+    "title": "Localization planning",
     "organizer": {
-      "name": "Luka Kapanadze",
-      "email": "luka.kapanadze@company.com"
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
     },
-    "start": "2026-09-04T11:00:00",
-    "end": "2026-09-04T12:00:00",
+    "start": "2026-09-06T13:00:00",
+    "end": "2026-09-06T13:30:00",
     "status": "confirmed"
   },
   {
-    "id": "01a01667-10cb-7e29-99ba-a00513cf2d65",
+    "id": "01a0767b-7ec0-7c72-b5f3-9afdd5be53f7",
     "room": {
-      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
-      "name": "Spruce"
+      "id": "01a0577a-dfaa-76a5-befc-d7077d27b40b",
+      "name": "Maple"
     },
-    "title": "Lunch & learn — what's new in React 19",
+    "title": "Partner summit",
+    "description": "Full-morning session with regional partners.",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-09-06T15:30:00",
+    "end": "2026-09-06T16:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a07a05-de00-78ff-951d-692a9bf24593",
+    "room": {
+      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
+      "name": "Hawthorn"
+    },
+    "title": "Lunch & learn — testing strategies",
     "description": "Informal talk, lunch provided.",
     "organizer": {
       "name": "Jonas Weber",
       "email": "jonas.weber@company.com"
     },
-    "start": "2026-09-04T13:00:00",
-    "end": "2026-09-04T14:00:00",
+    "start": "2026-09-07T08:00:00",
+    "end": "2026-09-07T09:00:00",
     "status": "confirmed"
   },
   {
-    "id": "01a016d0-8c9e-7f95-a42b-9c05d9f0f4da",
+    "id": "01a07a3c-cc80-7b94-8105-ffd586b68ca1",
+    "room": {
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "Roadmap sync",
+    "description": "Q4 themes and dependencies across teams.",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-07T09:00:00",
+    "end": "2026-09-07T10:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a07a73-bb00-7088-9102-f36dcf312842",
+    "room": {
+      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
+      "name": "Hawthorn"
+    },
+    "title": "Customer call — Northwind",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-09-07T10:00:00",
+    "end": "2026-09-07T10:30:00",
+    "status": "cancelled"
+  },
+  {
+    "id": "01a07aaa-a980-7ea0-93aa-be01a2027d85",
+    "room": {
+      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
+      "name": "Juniper"
+    },
+    "title": "Data platform review",
+    "description": "Warehouse costs and the new ingestion pipeline.",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-09-07T11:00:00",
+    "end": "2026-09-07T11:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a07ac6-20c0-7cae-9d53-def6d9bc3eee",
+    "room": {
+      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
+      "name": "Redwood"
+    },
+    "title": "1:1 Nino / Irina",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-07T11:30:00",
+    "end": "2026-09-07T13:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a07b33-fdc0-7e30-b217-d6ad6d04e727",
+    "room": {
+      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
+      "name": "Spruce"
+    },
+    "title": "Interview debrief",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-07T13:30:00",
+    "end": "2026-09-07T14:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a07b4f-7500-74dd-b473-94c6993c7c07",
+    "room": {
+      "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
+      "name": "Cedar"
+    },
+    "title": "Security awareness training",
+    "description": "Mandatory annual session. Bring laptops.",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-07T14:00:00",
+    "end": "2026-09-07T14:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a07b4f-7500-79c1-b55d-c34ae29e63e2",
+    "room": {
+      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
+      "name": "Juniper"
+    },
+    "title": "Release readiness check",
+    "description": "Go/no-go for the September release.",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-09-07T14:00:00",
+    "end": "2026-09-07T16:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a07b86-6380-7302-89c1-ea255e8488ce",
+    "room": {
+      "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
+      "name": "Cedar"
+    },
+    "title": "Vendor call — observability tooling",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-09-07T15:00:00",
+    "end": "2026-09-07T15:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a07bbd-5200-7dbc-8735-7f1aaf6905e9",
+    "room": {
+      "id": "01a0577a-dfa9-7234-83af-ed80ac260a53",
+      "name": "Aspen"
+    },
+    "title": "1:1 David / Elena",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-09-07T16:00:00",
+    "end": "2026-09-07T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a07bbd-5200-78d0-a3dd-d823f0222a16",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "1:1 Sophie / Marcus",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-07T16:00:00",
+    "end": "2026-09-07T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a07bf4-4080-71e0-81a3-d1091dc0b954",
+    "room": {
+      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
+      "name": "Redwood"
+    },
+    "title": "Security awareness training",
+    "description": "Mandatory annual session. Bring laptops.",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-09-07T17:00:00",
+    "end": "2026-09-07T17:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a07f2c-3a00-7666-bcaf-bf23d2abbc16",
+    "room": {
+      "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
+      "name": "Cedar"
+    },
+    "title": "1:1 Sophie / Luka",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-08T08:00:00",
+    "end": "2026-09-08T10:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a07fd1-0580-72c5-a48e-82aac5f25354",
+    "room": {
+      "id": "01a0577a-dfaa-76a5-befc-d7077d27b40b",
+      "name": "Maple"
+    },
+    "title": "Friday wins",
+    "description": "Weekly wrap-up across the whole office.",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-09-08T11:00:00",
+    "end": "2026-09-08T12:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a07fec-7cc0-7337-8018-705453002708",
+    "room": {
+      "id": "01a0577a-dfa9-7234-83af-ed80ac260a53",
+      "name": "Aspen"
+    },
+    "title": "1:1 Luka / David",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-08T11:30:00",
+    "end": "2026-09-08T13:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a07fec-7cc0-7b43-b0a9-a8b8823bb115",
+    "room": {
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "Vendor call — observability tooling",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-08T11:30:00",
+    "end": "2026-09-08T12:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a07fec-7cc0-7f67-879e-bae60e3c0ce2",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "Documentation sprint",
+    "organizer": {
+      "name": "Marcus Hale",
+      "email": "marcus.hale@company.com"
+    },
+    "start": "2026-09-08T11:30:00",
+    "end": "2026-09-08T12:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0803e-e280-749f-aa78-dcff80e734b5",
+    "room": {
+      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
+      "name": "Juniper"
+    },
+    "title": "Roadmap sync",
+    "description": "Q4 themes and dependencies across teams.",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-08T13:00:00",
+    "end": "2026-09-08T14:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08075-d100-768f-8cc4-1a1e25ef1a19",
+    "room": {
+      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
+      "name": "Hawthorn"
+    },
+    "title": "Incident postmortem — checkout outage",
+    "description": "Blameless review of the 28 August incident.",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-09-08T14:00:00",
+    "end": "2026-09-08T16:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08091-4840-76f6-8e3b-7182da1e678b",
+    "room": {
+      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
+      "name": "Juniper"
+    },
+    "title": "Partner summit",
+    "description": "Full-morning session with regional partners.",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-09-08T14:30:00",
+    "end": "2026-09-08T15:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a080ac-bf80-7e04-b60a-926d91628f66",
+    "room": {
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "Analytics review",
+    "description": "Funnel numbers for the last four weeks.",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-09-08T15:00:00",
+    "end": "2026-09-08T16:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a080c8-36c0-7a42-ae59-4c29b5c23e54",
+    "room": {
+      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
+      "name": "Redwood"
+    },
+    "title": "Company all-hands",
+    "description": "Q3 results, headcount plan, and Q&A.",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-08T15:30:00",
+    "end": "2026-09-08T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a080e3-ae00-79cf-a478-e47881d82b70",
+    "room": {
+      "id": "01a0577a-dfa9-7234-83af-ed80ac260a53",
+      "name": "Aspen"
+    },
+    "title": "API contract review",
+    "description": "Align on the v2 booking endpoints before implementation.",
+    "organizer": {
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
+    },
+    "start": "2026-09-08T16:00:00",
+    "end": "2026-09-08T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a080e3-ae00-7a21-b155-949e8877b94c",
+    "room": {
+      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
+      "name": "Hawthorn"
+    },
+    "title": "Friday wins",
+    "description": "Weekly wrap-up across the whole office.",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-09-08T16:00:00",
+    "end": "2026-09-08T17:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a084a4-fbc0-7bc7-83e6-01bdc5e8a5fe",
+    "room": {
+      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
+      "name": "Hawthorn"
+    },
+    "title": "1:1 David / Marcus",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-09-09T09:30:00",
+    "end": "2026-09-09T12:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a084db-ea40-7b3b-b3f7-ef6a305768fe",
+    "room": {
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "Recruiting screen — frontend",
+    "organizer": {
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
+    },
+    "start": "2026-09-09T10:30:00",
+    "end": "2026-09-09T12:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a084f7-6180-7209-91d5-4d17039b27b7",
+    "room": {
+      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
+      "name": "Juniper"
+    },
+    "title": "Incident postmortem — checkout outage",
+    "description": "Blameless review of the 28 August incident.",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-09-09T11:00:00",
+    "end": "2026-09-09T11:30:00",
+    "status": "cancelled"
+  },
+  {
+    "id": "01a084f7-6180-7630-b496-eb1bb30bc07f",
+    "room": {
+      "id": "01a0577a-dfa4-73a7-90ce-4b867c1a1306",
+      "name": "Sequoia"
+    },
+    "title": "Vendor call — observability tooling",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-09T11:00:00",
+    "end": "2026-09-09T12:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08565-3e80-73f9-9291-048ed6748e90",
+    "room": {
+      "id": "01a0577a-dfa4-73a7-90ce-4b867c1a1306",
+      "name": "Sequoia"
+    },
+    "title": "Interview debrief",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-09-09T13:00:00",
+    "end": "2026-09-09T13:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0859c-2d00-79e1-b6c4-542e802d9433",
+    "room": {
+      "id": "01a0577a-dfaa-76a5-befc-d7077d27b40b",
+      "name": "Maple"
+    },
+    "title": "Customer call — Northwind",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-09-09T14:00:00",
+    "end": "2026-09-09T14:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a085b7-a440-7e57-a009-c54b3e3ad570",
+    "room": {
+      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
+      "name": "Spruce"
+    },
+    "title": "Friday wins",
+    "description": "Weekly wrap-up across the whole office.",
+    "organizer": {
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
+    },
+    "start": "2026-09-09T14:30:00",
+    "end": "2026-09-09T15:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a085ee-92c0-76c4-b51a-6ecaac36e347",
     "room": {
       "id": "01a0577a-dfa9-7234-83af-ed80ac260a53",
       "name": "Aspen"
@@ -551,46 +921,601 @@
     "title": "Friday wins",
     "description": "Weekly wrap-up across the whole office.",
     "organizer": {
-      "name": "Anna Beridze",
-      "email": "anna.beridze@company.com"
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
     },
-    "start": "2026-09-04T15:00:00",
-    "end": "2026-09-04T16:00:00",
+    "start": "2026-09-09T15:30:00",
+    "end": "2026-09-09T16:00:00",
     "status": "confirmed"
   },
   {
-    "id": "01a01712-68e3-78f0-b5fb-257e9e6ecb6b",
+    "id": "01a085ee-92c0-7b76-b05d-cb7a3c91e38d",
     "room": {
       "id": "01a0577a-dfaa-76a5-befc-d7077d27b40b",
       "name": "Maple"
     },
-    "title": "Candidate intro call",
-    "description": "Candidate rescheduled to next week.",
+    "title": "Customer workshop — Acme",
+    "description": "On-site discovery session. Catering ordered.",
     "organizer": {
-      "name": "Nino Gogichaishvili",
-      "email": "nino.gogichaishvili@company.com"
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
     },
-    "start": "2026-09-04T15:30:00",
-    "end": "2026-09-04T16:00:00",
-    "status": "cancelled"
+    "start": "2026-09-09T15:30:00",
+    "end": "2026-09-09T17:00:00",
+    "status": "confirmed"
   },
   {
-    "id": "01a0172b-84fd-7357-9bca-04a7d6c1871f",
+    "id": "01a085ee-92c0-781f-bb9e-b9c788c4519c",
     "room": {
       "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
       "name": "Redwood"
     },
-    "title": "Sprint planning",
+    "title": "Candidate intro call",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-09-09T15:30:00",
+    "end": "2026-09-09T17:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0860a-0a00-7503-bc65-d8a95c8c2e28",
+    "room": {
+      "id": "01a0577a-dfa9-7234-83af-ed80ac260a53",
+      "name": "Aspen"
+    },
+    "title": "Architecture deep dive",
+    "description": "Event-driven migration: options and trade-offs.",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-09T16:00:00",
+    "end": "2026-09-09T16:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08640-f880-7356-8b7a-9af22fd274d3",
+    "room": {
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "Candidate intro call",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-09T17:00:00",
+    "end": "2026-09-09T17:30:00",
+    "status": "cancelled"
+  },
+  {
+    "id": "01a089e6-cf00-7c49-9fdc-7a2f5b63da4d",
+    "room": {
+      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
+      "name": "Juniper"
+    },
+    "title": "Security awareness training",
+    "description": "Mandatory annual session. Bring laptops.",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-10T10:00:00",
+    "end": "2026-09-10T11:00:00",
+    "status": "cancelled"
+  },
+  {
+    "id": "01a08a02-4640-7c08-935b-502204126385",
+    "room": {
+      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
+      "name": "Hawthorn"
+    },
+    "title": "1:1 Jonas / Marcus",
     "organizer": {
       "name": "Luka Kapanadze",
       "email": "luka.kapanadze@company.com"
     },
-    "start": "2026-08-25T10:00:00",
-    "end": "2026-08-25T11:00:00",
+    "start": "2026-09-10T10:30:00",
+    "end": "2026-09-10T11:00:00",
     "status": "confirmed"
   },
   {
-    "id": "01a01755-bf4d-716d-8fc6-4abda00e36e2",
+    "id": "01a08a39-34c0-78c5-a941-e0e273e8c017",
+    "room": {
+      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
+      "name": "Spruce"
+    },
+    "title": "1:1 Jonas / Elena",
+    "organizer": {
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
+    },
+    "start": "2026-09-10T11:30:00",
+    "end": "2026-09-10T13:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08a8b-9a80-79db-96e3-3aca2a99aa96",
+    "room": {
+      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
+      "name": "Juniper"
+    },
+    "title": "Candidate intro call",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-09-10T13:00:00",
+    "end": "2026-09-10T13:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08ac2-8900-7b68-ae0d-0b5c4a692d10",
+    "room": {
+      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
+      "name": "Hawthorn"
+    },
+    "title": "Documentation sprint",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-10T14:00:00",
+    "end": "2026-09-10T14:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08ade-0040-75f2-9546-fbd106c1119b",
+    "room": {
+      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
+      "name": "Redwood"
+    },
+    "title": "Analytics review",
+    "description": "Funnel numbers for the last four weeks.",
+    "organizer": {
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
+    },
+    "start": "2026-09-10T14:30:00",
+    "end": "2026-09-10T15:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08af9-7780-7e74-b61b-927e0349445b",
+    "room": {
+      "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
+      "name": "Cedar"
+    },
+    "title": "Vendor call — observability tooling",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-10T15:00:00",
+    "end": "2026-09-10T16:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08af9-7780-7452-8a16-9e0497756ec1",
+    "room": {
+      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
+      "name": "Juniper"
+    },
+    "title": "1:1 Mariam / Jonas",
+    "organizer": {
+      "name": "Marcus Hale",
+      "email": "marcus.hale@company.com"
+    },
+    "start": "2026-09-10T15:00:00",
+    "end": "2026-09-10T15:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08b30-6600-71ed-9297-af15c6cba163",
+    "room": {
+      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
+      "name": "Hawthorn"
+    },
+    "title": "API contract review",
+    "description": "Align on the v2 booking endpoints before implementation.",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-09-10T16:00:00",
+    "end": "2026-09-10T16:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08b30-6600-7310-ba96-60af7e935c1a",
+    "room": {
+      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
+      "name": "Redwood"
+    },
+    "title": "1:1 Sophie / Anna",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-10T16:00:00",
+    "end": "2026-09-10T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08b4b-dd40-70a2-b9a1-8f1a48950081",
+    "room": {
+      "id": "01a0577a-dfa4-73a7-90ce-4b867c1a1306",
+      "name": "Sequoia"
+    },
+    "title": "Roadmap sync",
+    "description": "Q4 themes and dependencies across teams.",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-09-10T16:30:00",
+    "end": "2026-09-10T17:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08b67-5480-7d02-9256-5905131f5b93",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "Bug triage",
+    "description": "Weekly pass over incoming reports.",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-10T17:00:00",
+    "end": "2026-09-10T17:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08ef1-b3c0-71f8-a4e2-b19403b57453",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "Candidate intro call",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-11T09:30:00",
+    "end": "2026-09-11T10:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08f28-a240-7ee3-8495-a9570e896042",
+    "room": {
+      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
+      "name": "Spruce"
+    },
+    "title": "Sprint retrospective",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-11T10:30:00",
+    "end": "2026-09-11T12:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08f44-1980-7c4f-ae93-bbf21fb85dd2",
+    "room": {
+      "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
+      "name": "Cedar"
+    },
+    "title": "Incident postmortem — checkout outage",
+    "description": "Blameless review of the 28 August incident.",
+    "organizer": {
+      "name": "Marcus Hale",
+      "email": "marcus.hale@company.com"
+    },
+    "start": "2026-09-11T11:00:00",
+    "end": "2026-09-11T12:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08f44-1980-7641-8f5f-14d57dfdbec1",
+    "room": {
+      "id": "01a0577a-dfaa-76a5-befc-d7077d27b40b",
+      "name": "Maple"
+    },
+    "title": "Leadership offsite prep",
+    "organizer": {
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
+    },
+    "start": "2026-09-11T11:00:00",
+    "end": "2026-09-11T13:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08f5f-90c0-7040-9369-aaefc19e8919",
+    "room": {
+      "id": "01a0577a-dfa4-73a7-90ce-4b867c1a1306",
+      "name": "Sequoia"
+    },
+    "title": "Data platform review",
+    "description": "Warehouse costs and the new ingestion pipeline.",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-09-11T11:30:00",
+    "end": "2026-09-11T12:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a08fb1-f680-7e99-9773-9334e9e2d794",
+    "room": {
+      "id": "01a0577a-dfa4-73a7-90ce-4b867c1a1306",
+      "name": "Sequoia"
+    },
+    "title": "Analytics review",
+    "description": "Funnel numbers for the last four weeks.",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-11T13:00:00",
+    "end": "2026-09-11T15:00:00",
+    "status": "cancelled"
+  },
+  {
+    "id": "01a0901f-d380-70b4-b499-e3640b7733d5",
+    "room": {
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "Performance review",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-11T15:00:00",
+    "end": "2026-09-11T15:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0903b-4ac0-7464-9fa1-0ed21a238c75",
+    "room": {
+      "id": "01a0577a-dfaa-76a5-befc-d7077d27b40b",
+      "name": "Maple"
+    },
+    "title": "Vendor call — HR platform",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-11T15:30:00",
+    "end": "2026-09-11T16:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0903b-4ac0-7130-a997-1f19659192c9",
+    "room": {
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "Leadership offsite prep",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-09-11T15:30:00",
+    "end": "2026-09-11T16:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a09072-3940-73a1-9304-af517cc672d8",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "Customer workshop — Acme",
+    "description": "On-site discovery session. Catering ordered.",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-11T16:30:00",
+    "end": "2026-09-11T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0908d-b080-7094-96c3-62eb27d10000",
+    "room": {
+      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
+      "name": "Redwood"
+    },
+    "title": "1:1 David / Marcus",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-09-11T17:00:00",
+    "end": "2026-09-11T17:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a093c5-aa00-70c4-81c3-d0baac5ef8d5",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "Customer call — Northwind",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-12T08:00:00",
+    "end": "2026-09-12T10:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a09485-ecc0-7096-8f4f-1efc741ae85b",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "Localization planning",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-12T11:30:00",
+    "end": "2026-09-12T12:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a099ac-48c0-7c66-8e67-ca3b09cc77f5",
+    "room": {
+      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
+      "name": "Redwood"
+    },
+    "title": "Customer call — Northwind",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-09-13T11:30:00",
+    "end": "2026-09-13T13:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a09a35-9d00-783e-a993-b9eb6fe5a0d7",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "Bug triage",
+    "description": "Weekly pass over incoming reports.",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-09-13T14:00:00",
+    "end": "2026-09-13T14:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a09e80-3f00-7865-8538-cb8e214c31dc",
+    "room": {
+      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
+      "name": "Juniper"
+    },
+    "title": "Design critique",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-14T10:00:00",
+    "end": "2026-09-14T10:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a09e80-3f00-7b8d-ba12-966a31038ddc",
+    "room": {
+      "id": "01a0577a-dfaa-76a5-befc-d7077d27b40b",
+      "name": "Maple"
+    },
+    "title": "Partner summit",
+    "description": "Full-morning session with regional partners.",
+    "organizer": {
+      "name": "Marcus Hale",
+      "email": "marcus.hale@company.com"
+    },
+    "start": "2026-09-14T10:00:00",
+    "end": "2026-09-14T10:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a09e9b-b640-76eb-9dd4-f77592da8879",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "1:1 David / Sophie",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-09-14T10:30:00",
+    "end": "2026-09-14T11:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a09eb7-2d80-77b8-b883-9220f09033ab",
+    "room": {
+      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
+      "name": "Spruce"
+    },
+    "title": "Onboarding — September intake",
+    "description": "Systems, tooling and security walkthrough for new hires.",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-09-14T11:00:00",
+    "end": "2026-09-14T12:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a09f25-0a80-703c-9bd4-9dcee54847c1",
+    "room": {
+      "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
+      "name": "Cedar"
+    },
+    "title": "Onboarding — September intake",
+    "description": "Systems, tooling and security walkthrough for new hires.",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-14T13:00:00",
+    "end": "2026-09-14T14:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a09f25-0a80-7ba9-b709-addecdfef990",
+    "room": {
+      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
+      "name": "Spruce"
+    },
+    "title": "Leadership offsite prep",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-09-14T13:00:00",
+    "end": "2026-09-14T13:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a09f40-81c0-7bb3-af29-f96256fdf31c",
+    "room": {
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "Hiring panel — backend engineer",
+    "description": "Four consecutive interview slots with breaks.",
+    "organizer": {
+      "name": "Sophie Laurent",
+      "email": "sophie.laurent@company.com"
+    },
+    "start": "2026-09-14T13:30:00",
+    "end": "2026-09-14T15:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a09fae-5ec0-77b6-9ae4-d9753935f3e2",
     "room": {
       "id": "01a0577a-dfa9-7234-83af-ed80ac260a53",
       "name": "Aspen"
@@ -600,69 +1525,796 @@
       "name": "Anna Beridze",
       "email": "anna.beridze@company.com"
     },
-    "start": "2026-08-27T09:00:00",
-    "end": "2026-08-27T10:30:00",
-    "status": "confirmed"
+    "start": "2026-09-14T15:30:00",
+    "end": "2026-09-14T16:00:00",
+    "status": "cancelled"
   },
   {
-    "id": "01a01781-dc73-75c3-b701-681629b8da03",
-    "room": {
-      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
-      "name": "Juniper"
-    },
-    "title": "Frontend guild",
-    "organizer": {
-      "name": "Sophie Laurent",
-      "email": "sophie.laurent@company.com"
-    },
-    "start": "2026-08-28T14:00:00",
-    "end": "2026-08-28T15:00:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a017dd-bc99-73d3-a2d2-726810bfc210",
-    "room": {
-      "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
-      "name": "Cedar"
-    },
-    "title": "Engineering standup",
-    "organizer": {
-      "name": "Luka Kapanadze",
-      "email": "luka.kapanadze@company.com"
-    },
-    "start": "2026-09-07T09:00:00",
-    "end": "2026-09-07T09:30:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a01822-5a54-7c51-bda3-bb2518b86378",
-    "room": {
-      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
-      "name": "Hawthorn"
-    },
-    "title": "Partner summit",
-    "description": "Full-morning session with regional partners.",
-    "organizer": {
-      "name": "Elena Rossi",
-      "email": "elena.rossi@company.com"
-    },
-    "start": "2026-09-08T09:00:00",
-    "end": "2026-09-08T12:00:00",
-    "status": "confirmed"
-  },
-  {
-    "id": "01a01860-a226-7f1f-8bba-e18c410b26a1",
+    "id": "01a09fae-5ec0-7c7f-98b2-38318ad38751",
     "room": {
       "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
       "name": "Spruce"
     },
-    "title": "Design system workshop",
+    "title": "Partner summit",
+    "description": "Full-morning session with regional partners.",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-09-14T15:30:00",
+    "end": "2026-09-14T16:30:00",
+    "status": "cancelled"
+  },
+  {
+    "id": "01a0a000-c480-7740-b6ef-bf8713b3d841",
+    "room": {
+      "id": "01a0577a-dfa9-7234-83af-ed80ac260a53",
+      "name": "Aspen"
+    },
+    "title": "Release readiness check",
+    "description": "Go/no-go for the September release.",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-14T17:00:00",
+    "end": "2026-09-14T17:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a000-c480-7e41-b5bf-5840eaff76be",
+    "room": {
+      "id": "01a0577a-dfa4-73a7-90ce-4b867c1a1306",
+      "name": "Sequoia"
+    },
+    "title": "Customer workshop — Acme",
+    "description": "On-site discovery session. Catering ordered.",
+    "organizer": {
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
+    },
+    "start": "2026-09-14T17:00:00",
+    "end": "2026-09-14T18:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a338-be00-7a5c-8786-297337ff3329",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "Support handover",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-15T08:00:00",
+    "end": "2026-09-15T09:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a36f-ac80-7a2e-86e1-8d11f450463d",
+    "room": {
+      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
+      "name": "Hawthorn"
+    },
+    "title": "Friday wins",
+    "description": "Weekly wrap-up across the whole office.",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-15T09:00:00",
+    "end": "2026-09-15T11:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a38b-23c0-73fe-bfef-b46e8daf1c72",
+    "room": {
+      "id": "01a0577a-dfaa-76a5-befc-d7077d27b40b",
+      "name": "Maple"
+    },
+    "title": "Leadership offsite prep",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-15T09:30:00",
+    "end": "2026-09-15T10:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a3a6-9b00-73a9-a16d-148d9cfe4e95",
+    "room": {
+      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
+      "name": "Redwood"
+    },
+    "title": "1:1 Anna / Jonas",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-09-15T10:00:00",
+    "end": "2026-09-15T11:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a3c2-1240-792f-901a-e4c81e5a3ab7",
+    "room": {
+      "id": "01a0577a-dfa4-73a7-90ce-4b867c1a1306",
+      "name": "Sequoia"
+    },
+    "title": "1:1 Marcus / Luka",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-15T10:30:00",
+    "end": "2026-09-15T11:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a3f9-00c0-7e00-884e-fd3d0a8a6411",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "1:1 Marcus / Sophie",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-09-15T11:30:00",
+    "end": "2026-09-15T12:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a482-5500-75c1-a92d-43556d2bea9e",
+    "room": {
+      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
+      "name": "Hawthorn"
+    },
+    "title": "Candidate intro call",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-15T14:00:00",
+    "end": "2026-09-15T15:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a482-5500-7ea8-af2c-89e760e6e8e4",
+    "room": {
+      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
+      "name": "Spruce"
+    },
+    "title": "Localization planning",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-15T14:00:00",
+    "end": "2026-09-15T15:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a4b9-4380-70c0-b037-21a552097517",
+    "room": {
+      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
+      "name": "Hawthorn"
+    },
+    "title": "Q4 budget review",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-15T15:00:00",
+    "end": "2026-09-15T16:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a4b9-4380-7e14-95e7-ba63bfc8e31e",
+    "room": {
+      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
+      "name": "Juniper"
+    },
+    "title": "Roadmap sync",
+    "description": "Q4 themes and dependencies across teams.",
+    "organizer": {
+      "name": "Marcus Hale",
+      "email": "marcus.hale@company.com"
+    },
+    "start": "2026-09-15T15:00:00",
+    "end": "2026-09-15T16:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a50b-a940-7687-9d69-6aad7ed90b3d",
+    "room": {
+      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
+      "name": "Redwood"
+    },
+    "title": "Product demo day",
+    "description": "Teams show what shipped this sprint. Open to everyone.",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-09-15T16:30:00",
+    "end": "2026-09-15T17:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a896-0880-7473-bc6c-2769a76c4c69",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "Release readiness check",
+    "description": "Go/no-go for the September release.",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-16T09:00:00",
+    "end": "2026-09-16T10:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a8b1-7fc0-7dee-8a99-3901e0434da5",
+    "room": {
+      "id": "01a0577a-dfa4-73a7-90ce-4b867c1a1306",
+      "name": "Sequoia"
+    },
+    "title": "Backend guild",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-16T09:30:00",
+    "end": "2026-09-16T10:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a903-e580-7586-a8cb-1e3f08b1b54e",
+    "room": {
+      "id": "01a0577a-dfa9-7234-83af-ed80ac260a53",
+      "name": "Aspen"
+    },
+    "title": "Friday wins",
+    "description": "Weekly wrap-up across the whole office.",
     "organizer": {
       "name": "Sophie Laurent",
       "email": "sophie.laurent@company.com"
     },
-    "start": "2026-09-10T13:00:00",
-    "end": "2026-09-10T15:00:00",
+    "start": "2026-09-16T11:00:00",
+    "end": "2026-09-16T13:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a971-c280-71e1-8845-c827337fb4f4",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "Architecture deep dive",
+    "description": "Event-driven migration: options and trade-offs.",
+    "organizer": {
+      "name": "Marcus Hale",
+      "email": "marcus.hale@company.com"
+    },
+    "start": "2026-09-16T13:00:00",
+    "end": "2026-09-16T15:00:00",
+    "status": "cancelled"
+  },
+  {
+    "id": "01a0a98d-39c0-71aa-9369-ab82179f0ec4",
+    "room": {
+      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
+      "name": "Spruce"
+    },
+    "title": "Q4 budget review",
+    "organizer": {
+      "name": "Marcus Hale",
+      "email": "marcus.hale@company.com"
+    },
+    "start": "2026-09-16T13:30:00",
+    "end": "2026-09-16T14:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a9c4-2840-7367-986a-3fa124975e94",
+    "room": {
+      "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
+      "name": "Cedar"
+    },
+    "title": "Analytics review",
+    "description": "Funnel numbers for the last four weeks.",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-16T14:30:00",
+    "end": "2026-09-16T16:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a9c4-2840-7fd2-a140-f88042970dd4",
+    "room": {
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "Onboarding — September intake",
+    "description": "Systems, tooling and security walkthrough for new hires.",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-16T14:30:00",
+    "end": "2026-09-16T15:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0a9df-9f80-7dca-9890-6802c2be8d6a",
+    "room": {
+      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
+      "name": "Hawthorn"
+    },
+    "title": "Customer workshop — Acme",
+    "description": "On-site discovery session. Catering ordered.",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-16T15:00:00",
+    "end": "2026-09-16T16:00:00",
+    "status": "cancelled"
+  },
+  {
+    "id": "01a0a9df-9f80-7bf4-b06d-06e5594b3955",
+    "room": {
+      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
+      "name": "Spruce"
+    },
+    "title": "Sprint retrospective",
+    "organizer": {
+      "name": "Marcus Hale",
+      "email": "marcus.hale@company.com"
+    },
+    "start": "2026-09-16T15:00:00",
+    "end": "2026-09-16T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0aa32-0540-7939-9036-9f8b2331f205",
+    "room": {
+      "id": "01a0577a-dfaa-76a5-befc-d7077d27b40b",
+      "name": "Maple"
+    },
+    "title": "Frontend guild",
+    "description": "Open forum for frontend patterns and tooling.",
+    "organizer": {
+      "name": "Marcus Hale",
+      "email": "marcus.hale@company.com"
+    },
+    "start": "2026-09-16T16:30:00",
+    "end": "2026-09-16T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0aa32-0540-70cf-bd10-f9626a25fcf4",
+    "room": {
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "Customer workshop — Acme",
+    "description": "On-site discovery session. Catering ordered.",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-16T16:30:00",
+    "end": "2026-09-16T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0add7-dbc0-79eb-a4fb-63dd979c1db3",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "1:1 Elena / Luka",
+    "organizer": {
+      "name": "Marcus Hale",
+      "email": "marcus.hale@company.com"
+    },
+    "start": "2026-09-17T09:30:00",
+    "end": "2026-09-17T10:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0adf3-5300-7981-beef-825803ffd809",
+    "room": {
+      "id": "01a0577a-dfa5-79f2-8eff-91ee87973b72",
+      "name": "Willow"
+    },
+    "title": "Q4 budget review",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-17T10:00:00",
+    "end": "2026-09-17T10:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0ae45-b8c0-7df5-9fb0-b92c3c919edf",
+    "room": {
+      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
+      "name": "Redwood"
+    },
+    "title": "Customer workshop — Acme",
+    "description": "On-site discovery session. Catering ordered.",
+    "organizer": {
+      "name": "Luka Kapanadze",
+      "email": "luka.kapanadze@company.com"
+    },
+    "start": "2026-09-17T11:30:00",
+    "end": "2026-09-17T12:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0ae98-1e80-7a13-92f8-c5531bf579f7",
+    "room": {
+      "id": "01a0577a-dfa9-7234-83af-ed80ac260a53",
+      "name": "Aspen"
+    },
+    "title": "1:1 David / Mariam",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-09-17T13:00:00",
+    "end": "2026-09-17T14:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0aeea-8440-7377-b1f0-e33db634cdf0",
+    "room": {
+      "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
+      "name": "Cedar"
+    },
+    "title": "Partner summit",
+    "description": "Full-morning session with regional partners.",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-09-17T14:30:00",
+    "end": "2026-09-17T15:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0af3c-ea00-7f0d-bbb7-f5a462fac09b",
+    "room": {
+      "id": "01a0577a-dfab-74c0-8222-c5c4de0240a7",
+      "name": "Juniper"
+    },
+    "title": "Leadership offsite prep",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-17T16:00:00",
+    "end": "2026-09-17T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0af58-6140-7cc3-bef5-e75334e35ee0",
+    "room": {
+      "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
+      "name": "Cedar"
+    },
+    "title": "Friday wins",
+    "description": "Weekly wrap-up across the whole office.",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-09-17T16:30:00",
+    "end": "2026-09-17T17:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0af58-6140-7b20-baf7-1cb9da8513d9",
+    "room": {
+      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
+      "name": "Redwood"
+    },
+    "title": "Onboarding — September intake",
+    "description": "Systems, tooling and security walkthrough for new hires.",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-17T16:30:00",
+    "end": "2026-09-17T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0af58-6140-7ea4-ae89-95f93d3c64e7",
+    "room": {
+      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
+      "name": "Spruce"
+    },
+    "title": "1:1 Anna / Marcus",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-09-17T16:30:00",
+    "end": "2026-09-17T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0af73-d880-7f17-9c19-e540389b8410",
+    "room": {
+      "id": "01a0577a-dfa9-7234-83af-ed80ac260a53",
+      "name": "Aspen"
+    },
+    "title": "Support handover",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-17T17:00:00",
+    "end": "2026-09-17T17:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0af73-d880-7c3c-9a31-558c5618b68e",
+    "room": {
+      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
+      "name": "Spruce"
+    },
+    "title": "Onboarding — September intake",
+    "description": "Systems, tooling and security walkthrough for new hires.",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-17T17:00:00",
+    "end": "2026-09-17T17:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0b2fe-37c0-770e-a772-ac41831ac4ba",
+    "room": {
+      "id": "01a0577a-dfa4-73a7-90ce-4b867c1a1306",
+      "name": "Sequoia"
+    },
+    "title": "Recruiting screen — frontend",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-09-18T09:30:00",
+    "end": "2026-09-18T12:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0b319-af00-7aab-abe1-4cc773ffb432",
+    "room": {
+      "id": "01a0577a-dfa9-7234-83af-ed80ac260a53",
+      "name": "Aspen"
+    },
+    "title": "Support handover",
+    "organizer": {
+      "name": "Elena Rossi",
+      "email": "elena.rossi@company.com"
+    },
+    "start": "2026-09-18T10:00:00",
+    "end": "2026-09-18T11:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0b350-9d80-76d2-8b1a-c6e01210c25f",
+    "room": {
+      "id": "01a0577a-dfa9-7234-83af-ed80ac260a53",
+      "name": "Aspen"
+    },
+    "title": "Marketing content review",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-18T11:00:00",
+    "end": "2026-09-18T12:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0b350-9d80-7394-b07b-d3edb56a6389",
+    "room": {
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "1:1 Elena / Irina",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-09-18T11:00:00",
+    "end": "2026-09-18T12:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0b350-9d80-7351-9b8f-fdcb16256125",
+    "room": {
+      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
+      "name": "Spruce"
+    },
+    "title": "Analytics review",
+    "description": "Funnel numbers for the last four weeks.",
+    "organizer": {
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
+    },
+    "start": "2026-09-18T11:00:00",
+    "end": "2026-09-18T12:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0b3d9-f1c0-7409-a642-2f2e8e14b194",
+    "room": {
+      "id": "01a0577a-dfaa-76a5-befc-d7077d27b40b",
+      "name": "Maple"
+    },
+    "title": "Onboarding — September intake",
+    "description": "Systems, tooling and security walkthrough for new hires.",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-18T13:30:00",
+    "end": "2026-09-18T15:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0b42c-5780-706f-8ee6-0ee7b3d5a8fb",
+    "room": {
+      "id": "01a0577a-dfaf-7b18-bcf9-1331c0fc7a9d",
+      "name": "Hawthorn"
+    },
+    "title": "1:1 Irina / Luka",
+    "organizer": {
+      "name": "Irina Petrova",
+      "email": "irina.petrova@company.com"
+    },
+    "start": "2026-09-18T15:00:00",
+    "end": "2026-09-18T15:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0b447-cec0-7d17-b48e-f5a2392cfe0c",
+    "room": {
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "Marketing content review",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-18T15:30:00",
+    "end": "2026-09-18T17:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0b463-4600-75f4-92ac-6a345b4b1fd7",
+    "room": {
+      "id": "01a0577a-dfac-71e7-8202-927aa73c6437",
+      "name": "Spruce"
+    },
+    "title": "1:1 David / Anna",
+    "organizer": {
+      "name": "Anna Beridze",
+      "email": "anna.beridze@company.com"
+    },
+    "start": "2026-09-18T16:00:00",
+    "end": "2026-09-18T17:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0b49a-3480-7b2f-9d76-382b18307f18",
+    "room": {
+      "id": "01a0577a-dfaa-76a5-befc-d7077d27b40b",
+      "name": "Maple"
+    },
+    "title": "1:1 Mariam / Marcus",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-18T17:00:00",
+    "end": "2026-09-18T18:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0b49a-3480-7676-a992-c0109b3cc30d",
+    "room": {
+      "id": "01a0577a-dfad-7e22-acd6-09b521e9a475",
+      "name": "Poplar"
+    },
+    "title": "Recruiting screen — frontend",
+    "organizer": {
+      "name": "Nino Gogichaishvili",
+      "email": "nino.gogichaishvili@company.com"
+    },
+    "start": "2026-09-18T17:00:00",
+    "end": "2026-09-18T18:00:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0b96e-2ac0-719e-931e-f230b5b00400",
+    "room": {
+      "id": "01a0577a-dfa9-7234-83af-ed80ac260a53",
+      "name": "Aspen"
+    },
+    "title": "Q4 budget review",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-19T15:30:00",
+    "end": "2026-09-19T17:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0b9c0-9080-7ce5-9528-fe87cdcef0ae",
+    "room": {
+      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
+      "name": "Redwood"
+    },
+    "title": "Company all-hands",
+    "description": "Q3 results, headcount plan, and Q&A.",
+    "organizer": {
+      "name": "David Kvaratskhelia",
+      "email": "david.kvaratskhelia@company.com"
+    },
+    "start": "2026-09-19T17:00:00",
+    "end": "2026-09-19T17:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0bd2f-7880-7e8b-a752-216f26a1c3e5",
+    "room": {
+      "id": "01a0577a-dfa7-776c-937a-d3e65b13c486",
+      "name": "Cedar"
+    },
+    "title": "Release readiness check",
+    "description": "Go/no-go for the September release.",
+    "organizer": {
+      "name": "Jonas Weber",
+      "email": "jonas.weber@company.com"
+    },
+    "start": "2026-09-20T09:00:00",
+    "end": "2026-09-20T10:30:00",
+    "status": "confirmed"
+  },
+  {
+    "id": "01a0be94-86c0-7b57-a009-133d763d5b85",
+    "room": {
+      "id": "01a0577a-dfa8-78be-8d60-a60c4e4bee90",
+      "name": "Redwood"
+    },
+    "title": "Quarterly business review",
+    "organizer": {
+      "name": "Mariam Tsiklauri",
+      "email": "mariam.tsiklauri@company.com"
+    },
+    "start": "2026-09-20T15:30:00",
+    "end": "2026-09-20T16:30:00",
     "status": "confirmed"
   }
 ]
